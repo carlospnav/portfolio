@@ -8,21 +8,21 @@ var gulp = require('gulp'),
 
 gulp.task('default', ['watch']);
 
-gulp.task('scripts', function(){
-  gulp.src('src/js/**/*.js')
-    .pipe(plumber())
-    .pipe(concat('app.js'))
-    .pipe(uglify())
-    .pipe(rename('app.min.js'))
-    .pipe(gulp.dest('dist/js'));
-});
+// gulp.task('scripts', function(){
+//   gulp.src('src/js/**/*.js')
+//     .pipe(plumber())
+//     .pipe(concat('app.js'))
+//     .pipe(uglify())
+//     .pipe(rename('app.min.js'))
+//     .pipe(gulp.dest('dist/js'));
+// });
 
-gulp.task('sass', function(){
-  gulp.src('src/scss/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css'));
-});
+// gulp.task('sass', function(){
+//   gulp.src('src/scss/**/*.scss')
+//     .pipe(plumber())
+//     .pipe(sass())
+//     .pipe(gulp.dest('dist/css'));
+// });
 
 gulp.task('banners', function(){
   gulp.src('src/banner/**/*.*')
@@ -104,9 +104,50 @@ gulp.task('images', function(){
     .pipe(gulp.dest('dist/images'));
 });
 
+gulp.task('main-script', function(){
+  gulp.src(['src/js/app.js', 'src/js/pages/index.js'])
+    .pipe(plumber())
+    .pipe(concat('index.js'))
+    .pipe(uglify())
+    .pipe(rename('index.min.js'))
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('resume-script', function(){
+  gulp.src(['src/js/app.js', 'src/js/pages/resume.js'])
+    .pipe(plumber())
+    .pipe(concat('resume.js'))
+    .pipe(uglify())
+    .pipe(rename('resume.min.js'))
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('main-sass', function(){
+  gulp.src(['src/scss/style.scss', 'src/scss/pages/index.scss'])
+  .pipe(plumber())
+  .pipe(concat('index.css'))
+  .pipe(sass())
+  .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('resume-sass', function(){
+  gulp.src(['src/scss/style.scss', 'src/scss/pages/resume.scss'])
+  .pipe(plumber())
+  .pipe(concat('resume.css'))
+  .pipe(sass())
+  .pipe(gulp.dest('dist/css'));
+});
+
 gulp.task('watch', function(){
-  gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['scripts']);
+  // gulp.watch('src/scss/**/*.scss', ['sass']);
+  // gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/style.scss', ['main-sass', 'resume-sass']);
+  gulp.watch('src/js/app.js', ['main-script', 'resume-script']);
+  gulp.watch('src/scss/pages/index.scss', ['main-sass']);
+  gulp.watch('src/scss/pages/resume.scss', ['resume-sass']);
+  gulp.watch('src/js/pages/index.js', ['main-script']);
+  gulp.watch('src/js/pages/resume.js', ['resume-script']);
+
 });
 
 
