@@ -20,7 +20,6 @@ img {
 
 body {
   margin: 0;
-  min-width: 375px;
   font-family: "Lato", sans-serif; }
 
 button {
@@ -148,6 +147,7 @@ article {
 
 footer {
   margin-top: 20px;
+  overflow: hidden;
   background-color: #d95c50;
   color: white; }
 
@@ -243,7 +243,7 @@ footer > p {
 
 @media screen and (max-width: 619px) {
   .banner {
-    background-image: url(../dist/banner/banner-sm.jpg); } }
+    background-image: url(/dist/banner/banner-sm.jpg); } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 619px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 619px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 619px), only screen and (min-device-pixel-ratio: 2) and (max-width: 619px), only screen and (min-resolution: 192dpi) and (max-width: 619px), only screen and (min-resolution: 2dppx) and (max-width: 619px) {
   .banner {
@@ -251,7 +251,7 @@ footer > p {
 
 @media screen and (min-width: 620px) {
   .banner {
-    background-image: url(../dist/banner/banner-md.jpg); }
+    background-image: url(/dist/banner/banner-md.jpg); }
   .banner p {
     line-height: 200%; }
   article {

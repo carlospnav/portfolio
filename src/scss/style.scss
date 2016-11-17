@@ -27,7 +27,6 @@ img{
 
 body{
   margin: 0;
-  min-width: 375px;
   font-family: "Lato", sans-serif;
 }
 
@@ -179,6 +178,7 @@ article{
 
 footer{
   margin-top: 20px;
+  overflow: hidden;
   background-color: #d95c50;
   color: white;
 }
@@ -289,7 +289,7 @@ footer > p{
 
 @media screen and (max-width: 619px){
   .banner{
-    background-image: url(../dist/banner/banner-sm.jpg);
+    background-image: url(/dist/banner/banner-sm.jpg);
   }
 }
 
@@ -308,7 +308,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 619px) 
 @media screen and (min-width: 620px){
 
   .banner{
-    background-image: url(../dist/banner/banner-md.jpg);
+    background-image: url(/dist/banner/banner-md.jpg);
   }
 
   .banner p{
