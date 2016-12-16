@@ -1,3 +1,21 @@
+function Section(){
+
+}
+
+Section.prototype = {
+  "display" : function(){
+  }
+};
+
+function SectionInfo (name){
+  this.name = name;
+}
+
+SectionInfo.prototype = {
+}
+
+
+
 function setMargin(){
   var element = document.getElementsByTagName('header')[0];
   var footer = document.getElementsByTagName('footer')[0];
@@ -33,3 +51,4 @@ function init(){
   setMargin();
   setToggle();
 }
+
