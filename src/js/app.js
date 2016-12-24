@@ -7,11 +7,22 @@ Section.prototype = {
   }
 };
 
-function SectionInfo (name){
+function SectionInfo (name, dates){
   this.name = name;
+  this.dates = dates;
 }
 
 SectionInfo.prototype = {
+}
+
+//To-do: Split EducationInfo into Education and Work/ProjectsInfo subclasses. 
+
+function EducationInfo(name){
+  Section.call(this, name);
+  this.location = location;
+  this.degree = degree;
+  this.majors = majors;
+  this.url = url;
 }
 
 
