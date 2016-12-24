@@ -5,6 +5,7 @@ it's ready it should serve as a demonstration of my improvements in Web Developm
 ##To-do List:
 1. Finish redesigning the visual identity of the page.
   1. Work on the overarching design of the page.  (Currently working on this).
+   1. Last section of work experience and second personal info to complete.
   2. Adapt it to different devices.
   3. Save as mock in the project.
 2. Add the portfolio information to the page.
