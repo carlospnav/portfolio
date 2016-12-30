@@ -9,6 +9,7 @@ it's ready it should serve as a demonstration of my improvements in Web Developm
   2. Adapt it to different devices.
   3. Save as mock in the project.
 2. Add the portfolio information to the page.
+  1. Use object oriented javascript to provide the information. 
 3. Pick a frontend framework and integrate it to the website.
 4. Synchronize the photography section with the interactive map. 
 5. Add support to my small game project. 
