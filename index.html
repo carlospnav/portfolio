@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolioApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carlos Navarrete - Front End Developer</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">-->
     <link rel="stylesheet" href="dist/css/style.css">
-    <script>
+    <!--<script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <script src="dist/js/app.min.js"></script>
+    </script>-->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="src/app.module.js"></script>
+    <script src="src/js/banner/banner.module.js"></script>
+    <script src="src/js/banner/banner.component.js"></script>
     <script src="dist/js/picturefill.min.js" async></script>
   </head>
-  <body onload="init()" onresize="setMargin()">
-    <header>
+  <!--<body onload="init()" onresize="setMargin()">-->
+  <body>
+    <banner></banner>
+    <!--<header>
       <p class="handheld-title">Carlos Navarrete - Front End Developer</p>
       <nav>
         <ul class="navigation header-navigation">
@@ -53,7 +57,7 @@
       FEATURED WORK
       </h3>
     </div>
-    <!-- TODO: Replace placeholder content with actual content -->
+   
     <section class="content">
         <article>
           <picture>
@@ -171,6 +175,6 @@
       <p>
         All rights reserved 2016.
       </p>
-    </footer>
+    </footer>-->
   </body>
 </html>
