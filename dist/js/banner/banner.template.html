@@ -5,3 +5,15 @@
     </p>
   </div>
 </section>
+<section class="banner-menu-container">
+  <div class="portrait-container">
+    <img ng-src="{{$ctrl.img.url}}" alt="{{$ctrl.img.alt}}" />
+  </div>
+  <nav class="banner-menu">
+    <ul>
+      <li ng-repeat="link in $ctrl.socialMedia"><a class="fa {{link.fontAwesomeType}} {{link.fontAwesomeSize}}" href="{{link.url}}"></a></li>
+    </ul>
+    
+  </nav>
+  <div class="next-arrow"></div>
+</section>
