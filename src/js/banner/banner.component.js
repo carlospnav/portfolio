@@ -2,7 +2,7 @@ angular
   .module('banner')
     .component('banner', {
       templateUrl: "dist/js/banner/banner.template.html",
-      controller: function BannerController(){
+      controller: function BannerController(Github){
         this.titles = [
           { name: "Web Developer" },
           { name: "Weekend Designer" },
@@ -33,7 +33,8 @@ angular
             fontAwesomeSize: "fa-2x", 
             url: "karnav@gmail.com"
           }
-          
         ]
+        var thing = Github.base.lastUpdate({ project: 'neighborhood-map' });
+        console.log(thing);
       }
     });

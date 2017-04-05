@@ -1,2 +1,2 @@
 /*Angular module for the Banner */
-angular.module('banner', []);
+angular.module('banner', ['github']);
