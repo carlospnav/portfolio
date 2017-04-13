@@ -94,6 +94,20 @@ angular.module('projects')
           });
         }         
       }
+      this.others = [
+        {
+          title: 'Budgeteer',
+          imgUrl: 'dist/images/projects/imgs/budgeteer.jpg',
+          imgAlt: 'Image of the project: ' + this.title + '.',
+          description: 'A basic shell for an organization/personal finance application.'
+        },
+        {
+          title: 'HomeSite',
+          imgUrl: 'dist/images/projects/imgs/homesite.jpg',
+          imgAlt: 'Image of the project: ' + this.title + '.',
+          description: 'A photo management application, written in the .NET stack focused entirely on the Back-End side.'
+        },   
+      ]
       this.featured.updateLastCommits([ 'neighborhood-Map', 'frontend-nanodegree-arcade-game', 'carlospnav.github.io' ]);
   }]});
 

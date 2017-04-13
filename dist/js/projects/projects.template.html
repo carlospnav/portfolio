@@ -3,8 +3,8 @@
     <h1>Projects</h1>
     <h3>Featured</h3>
   </div>
-  <div ng-repeat="project in $ctrl.featured.items" class="featured">
-    <div class="img-container projects-img-container">
+  <article ng-repeat="project in $ctrl.featured.items" class="featured">
+    <div class="projects-img-container container">
       <img ng-src="{{project.imgSrc}}" alt="{{project.imgAlt}}" class="project-img" />
     </div>
     <div class="projects-content-container">
@@ -17,8 +17,17 @@
           </li>
         </ul>
       </div>
-      <div class="projects-github-container">
-      </div>
+      <nav class="projects-github-container">
+      </nav>
+    </div>
+  </article>
+  <div class="other-projects container">
+    <article ng-repeat="project in $ctrl.others" class="other">
+      <img ng-src="{{project.imgUrl}}" alt="{{project.imgAlt}}" class="projects-img" />
+    </article>
+    <div> 
+      <h1>Other Projects</h1>
+      <p class="other-project-name"></p>
     </div>
   </div> 
 </section>
