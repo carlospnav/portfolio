@@ -1,0 +1,19 @@
+<section class="education">
+  <h1>Education</h1>
+  <div class="school-square container">
+    <div class="schools-container container">
+      <article ng-repeat="school in $ctrl.schools">
+        <h3 class="school-title">{{school.name}} - {{school.degree}}</h3>
+        <h6 class="school-date">{{school.date}}</h6>
+        <h4 class="school-program">{{school.program}}</h4>
+        <div class="school-description">
+          <p>{{school.description}}</p>
+          <img ng-src="{{school.thumbnail}}" alt="{{school.thumbAlt}}" />
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="school-ribbon">
+    <img ng-src="$ctrl.ribbonUrl" alt="A ribbon for the school hat decoration." />
+  </div>
+</section>
