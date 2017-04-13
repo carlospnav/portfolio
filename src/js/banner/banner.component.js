@@ -34,7 +34,5 @@ angular
             url: "karnav@gmail.com"
           }
         ]
-        var thing = Github.base.lastUpdate({ project: 'neighborhood-map' });
-        console.log(thing);
       }
     });

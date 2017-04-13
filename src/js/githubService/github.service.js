@@ -2,7 +2,7 @@ angular.module('github').
   factory('Github', ['$resource', function($resource){
     return {
       base: $resource('https://api.github.com/repos/carlospnav/:project', {}, {
-        lastUpdate: {
+        baseInfo: {
           method: 'GET',
           params: { project: '@project' }
         }, 
@@ -15,7 +15,7 @@ angular.module('github').
         },
         todo: {
           method: 'GET',
-          params: { project: '@project', type: 'content/todo.js' }
+          params: { project: '@project', type: 'contents/todo.json' }
         }, 
       })
     }

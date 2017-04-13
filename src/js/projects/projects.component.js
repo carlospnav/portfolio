@@ -1,15 +1,16 @@
-'use script';
+'use strict';
 
 angular.module('projects')
   .component('projects', {
     templateUrl: "dist/js/projects/projects.template.html",
-    controller: function ProjectsController(){
+    controller: ['Github', function ProjectsController(Github){
+      var self = this;
       this.featured = {
         items: [
           { 
             title: 'Neighborhood Map',
             imgSrc: 'dist/images/projects/imgs/neighborhoodMap.jpg',
-            imgAlt: 'Image of the project: ' + this.featured[0].title + '.',
+            imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A map of central Edinburgh with tourist information on select points of interest.', 
             bulletpoints: [
               'Users can browse a list of points of interest, filter them, and get Wikipedia information on the ones they are interested in.',
@@ -25,7 +26,7 @@ angular.module('projects')
           { 
             title: 'Arcade Game',
             imgSrc: 'dist/images/projects/imgs/arcadeGame.jpg',
-            imgAlt: 'Image of the project: ' + this.featured[1].title + '.',
+            imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A version of Frogger, an old game from the 80s where the goal was to cross a street under heavy traffic.', 
             bulletpoints: [
               'The player must take the character across the street, moving one tile at a time and avoiding the bugs.',
@@ -41,7 +42,7 @@ angular.module('projects')
           { 
             title: 'This Website',
             imgSrc: 'dist/images/projects/imgs/portfolioWebsite.jpg',
-            imgAlt: 'Image of the project: ' + this.featured[2].title + '.',
+            imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'My Portfolio Website. Intended to be an alternative, interactive version of my resume.', 
             bulletpoints: [
               'Visitors can scroll down the page and browse through some interactive sections of my resume.',
@@ -55,14 +56,49 @@ angular.module('projects')
             githubLink: ''
           },
         ],
-        query: function(){
-          
-        }
+        updateGithubBaseInfo: function(projectNames){
+          self.featured.update(Github.base.baseInfo, ['lastUpdated', 'githubLink'], projectNames);
+        },
+        updateTodo: function(projectNames){
+          self.featured.update(Github.specific.todo, 'todoList',  projectNames);
+        },
+        updateLastCommits: function(projectNames){
+          self.featured.update(Github.specific.commits, 'lastCommits',  projectNames);
+        },
+        update: function(updateFn, type, projectNames){
+          var content, parsedResource;
+        
+          projectNames.forEach(function(name, index){
+            updateFn({ project: name }).$promise
+            .then(function(data){
+              if (typeof(type) === 'string'){
+                if (type === 'todoList') {
+                  parsedResource = JSON.parse(atob(data.content));
+                  content = parsedResource.todo;
+                }
+                else if (type === 'lastCommits'){
+                  parsedResource = JSON.parse(angular.toJson(data));
+                  content = parsedResource.splice(0, 3);
+                }
+                self.featured.items[index][type].length = 0;
+                self.featured.items[index][type] = content;
+                console.log('name: ' + self.featured.items[index].title);
+                console.log(self.featured.items[index][type]);  
+              }
+              else if (typeof(type) === 'object'){
+                self.featured.items[index].lastUpdated = data.updated_at;
+                self.featured.items[index].githubLink = data.url;
+                console.log('name: ' + self.featured.items[index].title + ' | url: ' + self.featured.items[index].lastUpdated + '| last updated: ' + self.featured.items[index].githubLink);
+              }
+            });
+          });
+        }         
       }
-    }
-  });
+      this.featured.updateLastCommits([ 'neighborhood-Map', 'frontend-nanodegree-arcade-game', 'carlospnav.github.io' ]);
+  }]});
 
-  //Last 3 commits.
-  //To-do list based on github api content of a file decoded from base64.
-  //Last Updated
-  // Github Link
+//To-do:
+//Create the element on the page that displays the github information.
+//Once project is finalized, remove console logs.
+  
+  
