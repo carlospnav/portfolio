@@ -2,7 +2,7 @@
 
 angular.module('projects')
   .component('projects', {
-    templateUrl: "dist/js/projects/projects.template.html",
+    templateUrl: 'dist/js/projects/projects.template.html',
     controller: ['Github', function ProjectsController(Github){
       var self = this;
       this.featured = {
