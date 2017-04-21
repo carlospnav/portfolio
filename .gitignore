@@ -2,3 +2,4 @@ node_modules/
 src/*
 !src/js
 !src/scss
+!src/css

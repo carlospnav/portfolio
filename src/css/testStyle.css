@@ -1,0 +1,171 @@
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  position: relative;
+  margin: 0;
+}
+
+.container{ 
+  margin: 20px 40px;
+}
+
+.top-container{
+  margin: 40px 40px 0 40px;
+}
+
+.banner-menu-container{
+  position: relative;
+  margin: 0 40px;
+  height: 80px;
+}
+
+.banner-menu-container::before{
+  content: "";
+  position: absolute;
+  top: 40px;
+  width: 0;
+  height: 0;
+  border-left: 30vw solid rgb(15, 15, 30);
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid rgb(15, 15, 30);
+}
+
+.banner-menu-container::after{
+  content:"";
+  position: absolute;
+  top: 80px;
+  right: -40px;
+  width:0;
+  height:0;
+  border-right: 27vw solid transparent;
+  border-left: 27vw solid transparent;
+  border-top: 27vw solid white;
+}
+
+.banner{
+  background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
+  background-size: cover;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: "Lato";
+  font-style: italic;
+  padding: 5vh 0 28vh 0;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.banner-title{
+  margin: 0 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(95, 130, 172);
+}
+
+.banner-title:first-of-type{
+  margin: 0 10vw;
+  justify-content: flex-end;
+  font-size: 70px;
+  color: rgb(55, 55, 75);
+}
+
+.banner-title:last-of-type{
+  justify-content: flex-start;
+  font-size: 40px;
+  color: rgb(230, 230, 250);
+}
+
+.banner-menu{
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-menu > ul{
+  margin: 0;
+  padding: 0;
+}
+
+.banner-menu li{
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 35px;
+}
+
+.banner-menu li:nth-of-type(2){
+  margin: 0 10em 0 15px;
+}
+
+.banner-menu li>a{
+  text-decoration: none;
+  color: black;
+}
+
+.portrait-container{
+  position: absolute;
+  left: calc(50% - 10em);
+  top: -10em;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait-container>img{
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.projects{
+  margin-top: 0;
+  background-color: rgb(15, 15, 30);
+  height: 600px;
+}
+
+.section-title{
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title>h1{
+  margin: 0 0 0 12%;
+  font-size: 150px;
+  color: white;
+}
+
+.section-title>h3{
+  margin: 0 18% 0 0;
+  font-size: 80px;
+  color: rgb(15, 15, 30);
+  color: white;
+  z-index: 1;
+}
+
+
