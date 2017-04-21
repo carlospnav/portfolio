@@ -9,28 +9,25 @@ angular
           { name: "World Traveller" }   
         ],
         this.img = {
-          url: "dist/images/banner/portrait/portrait.jpg",
+          url: "dist/staticimages/gifoto.jpg",
           alt: "Profile image of developer."
         },
         this.socialMedia = [
+      
           { 
-            fontAwesomeType: "fa-facebook-square",
-            fontAwesomeSize: "fa-2x", 
-            url: "https://www.facebook.com/carlos.navarrette", 
-          },          
-          { 
-            fontAwesomeType: "fa-github",
-            fontAwesomeSize: "fa-2x",  
+            type: "entypo-github-circled",
             url: "https://www.github.com/carlospnav"
           },
           { 
-            fontAwesomeType: "fa-linkedin-square", 
-            fontAwesomeSize: "fa-2x", 
+            type: "entypo-linkedin-circled", 
             url: "https://www.linkedin/carlospnav"
           },
+          { 
+            type: "entypo-facebook-circled",
+            url: "https://www.facebook.com/carlos.navarrette", 
+          },    
           {
-            fontAwesomeType: "fa-envelope",
-            fontAwesomeSize: "fa-2x", 
+            type: "entypo-info-circled",
             url: "karnav@gmail.com"
           }
         ]

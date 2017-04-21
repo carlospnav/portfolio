@@ -6,12 +6,12 @@
   </div>
 </section>
 <section class="banner-menu-container container">
-  <div class="portrait-container">
+  <div class="banner-portrait portrait-container">
     <img ng-src="{{$ctrl.img.url}}" alt="{{$ctrl.img.alt}}" />
   </div>
   <nav class="banner-menu">
     <ul>
-      <li ng-repeat="link in $ctrl.socialMedia"><a class="fa {{link.fontAwesomeType}} {{link.fontAwesomeSize}}" href="{{link.url}}"></a></li>
+      <li ng-repeat="link in $ctrl.socialMedia" class="{{link.type}}"><a  href="{{link.url}}"></a></li>
     </ul>
     
   </nav>
