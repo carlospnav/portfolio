@@ -15,6 +15,18 @@ body, html{
   margin: 0;
 }
 
+.font-title{
+  font-size: 20px;
+  font-weight: 900;
+  font-family: "Lato";
+  font-style: italic;
+  color: white;
+}
+
+.left-space{
+  padding-left: 30px;
+}
+
 .container{ 
   margin: 20px 40px;
 }
@@ -55,10 +67,6 @@ body, html{
 .banner{
   background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
   background-size: cover;
-  font-size: 20px;
-  font-weight: 900;
-  font-family: "Lato";
-  font-style: italic;
   padding: 5vh 0 28vh 0;
   height: 800px;
   display: flex;
@@ -141,13 +149,12 @@ body, html{
 .projects{
   margin-top: 0;
   background-color: rgb(15, 15, 30);
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .section-title{
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
-  font-style: italic;
   height: 500px;
   display: flex;
   justify-content: space-between;
@@ -164,8 +171,75 @@ body, html{
   margin: 0 18% 0 0;
   font-size: 80px;
   color: rgb(15, 15, 30);
-  color: white;
   z-index: 1;
+}
+
+.featured{
+  margin: 160px 140px 120px 140px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-img-container{
+  background-color: white;
+  width: 670px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-img-container>img{
+  padding: 10px;
+  max-width: 100%
+}
+.projects-content-container{
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+
+.project-content>h3{
+  margin: 0;
+  font-size: 60px;
+}
+
+.project-content{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.project-subtitle{
+  font-size: 18px;
+  background: linear-gradient(to right, rgb(63,63,83), rgb(15, 15, 30));
+  margin: 0;
+  padding: 55px 0 55px 30px;
+}
+
+.project-subtitle>h6{
+  margin: 0;
+}
+
+.projects-github-container{
+  width: 150px;
+}
+
+.project-bulletpoints{
+  flex: 1;
+  font-size: 16px;
+  font-weight: 200;
+  margin: 0;
+  padding: 20px 20px 0 50px;
+  background: linear-gradient(to right, rgb(55,55,75), rgb(15, 15, 30));
+}
+
+.project-bulletpoints>ul{
+  padding: 0;
+}
+
+.project-bulletpoints li{
+  margin-top: 10px;
 }
 
 
