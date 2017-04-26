@@ -151,7 +151,6 @@ body, html{
   background-color: rgb(15, 15, 30);
   display: flex;
   flex-direction: column;
-
 }
 
 .section-title{
@@ -175,11 +174,54 @@ body, html{
 }
 
 .featured{
+  position: relative;
   margin: 160px 140px 120px 140px;
   height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+}
+
+.featured-top::before{
+  position: absolute;
+  content:"";
+  top: -300px;
+  height: 0;
+  width: 0;
+  border-right: 32vw solid transparent;
+  border-left: 32vw solid transparent;
+  border-bottom: 35vw solid rgba(255,255,255, 0.02);
+  z-index: 0;
+}
+
+.featured-bot::after{
+  position: absolute;
+  content:"";
+  top: 0;
+  height: 0;
+  width: 0;
+  border-right: 32vw solid transparent;
+  border-left: 32vw solid transparent;
+  border-bottom: 35vw solid rgba(255,255,255, 0.02);
+  z-index: 0;
+}
+
+.even-project>.projects-img-container{
+  order: 1;
+}
+
+.even-project .project-subtitle{
+  background: linear-gradient(to left, rgb(63,63,83), rgb(15, 15, 30));
+}
+
+.even-project .project-bulletpoints{
+  background: linear-gradient(to left, rgb(55,55,75), rgb(15, 15, 30));
+}
+
+.even-project .project-content{
+  flex: 1;
+  order: 1;
 }
 
 .projects-img-container{
@@ -242,4 +284,56 @@ body, html{
   margin-top: 10px;
 }
 
+.other-projects-container{
+  margin: 0 20px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.other-projects{
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.other-projects::before{
+
+}
+
+.other-projects-title{
+  margin-right: 60px;
+  width: 450px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.other-projects-title>h1{
+  font-size: 50px;
+  margin: 0;
+}
+
+.other-project-name{
+  margin: 0 0 0 80px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.other{
+  margin: 0 40px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(40, 40, 60);
+  border-radius: 10px;
+}
+
+.other>img{
+  max-width: 100%;
+  padding: 10px;
+}
 
