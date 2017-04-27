@@ -226,7 +226,7 @@ body, html{
 
 .projects-img-container{
   background-color: white;
-  width: 670px;
+  width: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +237,7 @@ body, html{
   max-width: 100%
 }
 .projects-content-container{
+  padding-bottom: 10px;
   display: flex;
   height: 100%;
   flex: 1;
@@ -300,21 +301,17 @@ body, html{
   align-items: flex-start;
 }
 
-.other-projects::before{
-
-}
-
 .other-projects-title{
   margin-right: 60px;
   width: 450px;
-  padding-bottom: 60px;
+  padding-bottom: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .other-projects-title>h1{
-  font-size: 50px;
+  font-size: 60px;
   margin: 0;
 }
 
@@ -326,8 +323,8 @@ body, html{
 
 .other{
   margin: 0 40px;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   background-color: rgb(40, 40, 60);
   border-radius: 10px;
 }

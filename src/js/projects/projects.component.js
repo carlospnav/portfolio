@@ -106,7 +106,19 @@ angular.module('projects')
           imgUrl: 'dist/images/projects/thumbs/homesite.jpg',
           imgAlt: 'Image of the project: ' + this.title + '.',
           description: 'A photo management application, written in the .NET stack focused entirely on the Back-End side.'
-        },   
+        },
+        {
+          title: '',
+          imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
+          imgAlt: 'Project unavailable.',
+          description: 'Project yet unavailable.'
+        },  
+        {
+          title: '',
+          imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
+          imgAlt: 'Project unavailable.',
+          description: 'Project yet unavailable.'
+        },    
       ]
       // this.featured.updateLastCommits([ 'neighborhood-Map', 'frontend-nanodegree-arcade-game', 'carlospnav.github.io' ]);
   }]});
