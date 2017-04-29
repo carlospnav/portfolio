@@ -1,11 +1,11 @@
-<section class="banner top-container container font-title">
+<section class="banner font-title">
   <div ng-repeat="title in ::$ctrl.titles" class="banner-title">
     <p>
       {{::title.name}}
     </p>
   </div>
 </section>
-<section class="banner-menu-container container">
+<section class="banner-menu-container">
   <div class="banner-portrait portrait-container">
     <img ng-src="{{$ctrl.img.url}}" alt="{{$ctrl.img.alt}}" />
   </div>
@@ -13,7 +13,6 @@
     <ul>
       <li ng-repeat="link in $ctrl.socialMedia" class="{{link.type}}"><a  href="{{link.url}}"></a></li>
     </ul>
-    
   </nav>
   <div class="next-arrow"></div>
 </section>

@@ -23,21 +23,40 @@ body, html{
   color: white;
 }
 
+.font-text{
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Lato";
+  color: black;
+}
+
 .left-space{
   padding-left: 30px;
 }
 
 .container{ 
-  margin: 20px 40px;
+  margin: 0 40px 40px 40px;
 }
 
 .top-container{
   margin: 40px 40px 0 40px;
 }
 
+.inner-container{
+  padding: 40px;
+}
+
+.thick-inner-container{
+  padding: 120px;
+}
+
+banner{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .banner-menu-container{
   position: relative;
-  margin: 0 40px;
   height: 80px;
 }
 
@@ -146,8 +165,11 @@ body, html{
   z-index: 1;
 }
 
+projects{
+  display: block;
+}
+
 .projects{
-  margin-top: 0;
   background-color: rgb(15, 15, 30);
   display: flex;
   flex-direction: column;
@@ -175,7 +197,7 @@ body, html{
 
 .featured{
   position: relative;
-  margin: 160px 140px 120px 140px;
+  margin: 110px 140px;
   height: 480px;
   display: flex;
   align-items: center;
@@ -303,7 +325,7 @@ body, html{
 
 .other-projects-title{
   margin-right: 60px;
-  width: 450px;
+  width: 500px;
   padding-bottom: 110px;
   display: flex;
   flex-direction: column;
@@ -311,7 +333,7 @@ body, html{
 }
 
 .other-projects-title>h1{
-  font-size: 60px;
+  font-size: 75px;
   margin: 0;
 }
 
@@ -334,3 +356,100 @@ body, html{
   padding: 10px;
 }
 
+education{
+  height: 860px;
+  display: block;
+  position: relative;
+  background-color: rgb(15, 15, 30);
+}
+
+.education{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.education-title{
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.education-title::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 430px;
+  border-top: 2px solid white;
+  border-left: 900px solid white;
+  border-right: 900px solid white;
+  border-bottom: 2px solid white;
+}
+
+.education-title>h1{
+  margin: 0;
+  font-size: 130px;
+}
+
+.school-square{
+  padding: 0;
+  min-width: 860px;
+  position: relative;
+  display: flex;
+}
+
+.school-rotating-background{
+  flex: 1;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.schools-container{
+  padding: 120px;
+  display:flex;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.school{
+  width: 50%;
+  z-index: 1;
+}
+
+.school img{
+  width: 60px;
+}
+
+.school-header{
+  display: inline-block;
+  width: 80%;
+}
+
+.school-title{
+  font-size: 23px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.school-date{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.school-program{
+  margin: 0;
+  font-weight: 500;
+}
+
+.school-description{
+  font-size: 16px;
+}
+
+skills{
+  display: block;
+  height: 1080px;
+  background-color: rgb(15, 15, 30);
+}
