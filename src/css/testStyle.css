@@ -50,6 +50,13 @@ body, html{
   padding: 120px;
 }
 
+.full-height-container{
+  height: 860px;
+  display: block;
+  position: relative;
+  background-color: rgb(15, 15, 30);
+}
+
 banner{
   display: flex;
   flex-flow: column nowrap;
@@ -357,10 +364,7 @@ projects{
 }
 
 education{
-  height: 860px;
-  display: block;
-  position: relative;
-  background-color: rgb(15, 15, 30);
+
 }
 
 .education{
