@@ -363,8 +363,18 @@ projects{
   padding: 10px;
 }
 
-education{
+.education{
+  overflow: hidden;
+}
 
+education::after{
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border: 200px solid rgb(171, 63, 73);;
 }
 
 .education{
@@ -398,41 +408,55 @@ education{
 
 .school-square{
   padding: 0;
-  min-width: 860px;
+  max-width: 860px;
   position: relative;
   display: flex;
 }
 
 .school-rotating-background{
+  position: relative;
   flex: 1;
   transform: rotate(45deg);
   background-color: white;
+  z-index: 1;
 }
 
 .schools-container{
-  padding: 120px;
+  padding: 180px 80px;
   display:flex;
   flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+  transform: rotate(-45deg);
 }
 
 .school{
+  padding: 30px;
   width: 50%;
   z-index: 1;
 }
 
-.school img{
-  width: 60px;
+.school-logo-location{
+  display: flex;
+}
+
+.school-logo-location img{
+  max-height: 40px;
+}
+
+.school-logo-location p{
+  margin: 10px 0 10px 10px;
+  font-size: 14px;
 }
 
 .school-header{
   display: inline-block;
-  width: 80%;
 }
 
 .school-title{
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 900;
   margin: 0;
 }
