@@ -364,7 +364,7 @@ projects{
 }
 
 .education{
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 education::after{
@@ -480,4 +480,60 @@ skills{
   display: block;
   height: 1080px;
   background-color: rgb(15, 15, 30);
+}
+
+.skills{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.skills > aside{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  background: linear-gradient(to left, #0f0f1e 0, #0f0f1e 50%, white 50%)
+}
+
+.skills > aside::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 450px;
+  height: 860px;
+  background: url("../../dist/images/skills/face-alt2.png");
+  background-size: contain;
+}
+
+.skills > aside::after{
+  content: "";
+  position: absolute;
+  right: 50px;
+  width: 450px;
+  height: 860px;
+  background: url("../../dist/images/skills/face-white.png");
+  background-size: contain;
+}
+
+.skills-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  width: 50%;
+  z-index: 1;
+}
+
+.skills-title{
+  font-size: 150px;
+  color: white;
+  margin: 165px 0 0 230px;
+}
+
+.skill{
+  margin: 0 10px;
+  font-weight: 900;
 }

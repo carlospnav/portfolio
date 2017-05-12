@@ -1,8 +1,10 @@
 <section class="skills">
-  <!--<aside>
+  <aside>
     <div class="skills-container container">
-      <span ng-repeat="skill in $ctrl.skills">{{skill}}</span>
+      <div class="font-text skill" ng-repeat="skill in $ctrl.skills" >
+        <span ng-style="{{skill.size}}">{{skill.name}}</span>
+      </div>
     </div>
   </aside> 
-  <h1>Skills</h1>-->
+  <h1 class="skills-title font-title">Skills</h1>
 </section>
