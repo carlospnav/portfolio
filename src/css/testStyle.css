@@ -6,13 +6,25 @@
   font-family: 'entypo', sans-serif;
 }
 
+:root{
+  --portfolio-blue: rgb(15, 15, 30);
+}
+
 *{
   box-sizing: border-box;
 }
 
-body, html{
+body, html, p{
   position: relative;
   margin: 0;
+}
+
+main{
+  overflow: hidden;
+}
+
+ul{
+  margin-top: 0.3em;
 }
 
 .font-title{
@@ -54,7 +66,15 @@ body, html{
   height: 860px;
   display: block;
   position: relative;
-  background-color: rgb(15, 15, 30);
+
+}
+
+skills.full-height-container, education.full-height-container   {
+  background-color: var(--portfolio-blue);
+}
+
+.footer-container{
+
 }
 
 banner{
@@ -536,4 +556,53 @@ skills{
 .skill{
   margin: 0 10px;
   font-weight: 900;
+}
+
+.portfolio-footer{
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+
+footer{
+  background-color: var(--portfolio-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  bottom: 0;
+  height: 200px;
+}
+
+footer::before{
+  content: "";
+  height: 500px;
+  width: 500px;
+  background-color: var(--portfolio-blue);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+nav.media-links{
+  margin-top: 1em;
+  display: flex;
+  color: white;
+}
+
+div.media-links{
+  margin-right: 40px;
+}
+
+
+
+a.media-link{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.media-link-title{
+  padding-left: 20px;
+  font-weight: 500;
 }
