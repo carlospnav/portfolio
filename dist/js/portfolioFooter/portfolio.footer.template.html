@@ -5,26 +5,29 @@
     </div>-->
     <div class="central-content">
       <div class="footer-title">
-        <h1>Available</h1>
-        <h4>for hire.</h4>
+        <h1 class="footer-title font-title">Available</h1>
+        <h4 class="footer-title font-title">for hire.</h4>
       </div>
-      <!--<div class="chat-bubble"> -->
+      <div class="chat-bubble"> 
         <!-- Before: Bubble Circle. After: Red Ribbon !-->
-        <!--<p>
+        <p class="font-text chat-bubble">
           {{$ctrl.chat}}
-          <span>{{$ctrl.thanks}}</span>
+          <span class="chat-bubble">{{$ctrl.thanks}}</span>
         </p>
-        <h4>
+        <h4 class="chat-bubble font-title">
           {{$ctrl.name}}
         </h4>
-      </div>-->
-    </div>
-    <!--<div class="map-container">
-      <div class="map-text">
-        <h6>Currently</h6>
-        <h6 class="located-text">Located in:</h6><p>{{$ctrl.location}}</p>
       </div>
-    </div>-->
+    </div>
+    <div class="map-block-container">
+      <div class="map-text">
+        <h6 class="font-text map-text">Currently</h6>
+        <h5 class="font-text map-text">Located in:</h6> <p class="font-title map-text">{{$ctrl.location}}</p>
+      </div>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="profile-image">

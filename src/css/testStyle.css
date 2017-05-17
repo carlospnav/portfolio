@@ -8,14 +8,19 @@
 
 :root{
   --portfolio-blue: rgb(15, 15, 30);
+  --portfolio-red: rgb(171, 63, 73);
 }
 
 *{
   box-sizing: border-box;
 }
 
-body, html, p{
+body, html{
   position: relative;
+  margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6{
   margin: 0;
 }
 
@@ -46,7 +51,8 @@ ul{
   padding-left: 30px;
 }
 
-.container{ 
+.container{
+  position: relative; 
   margin: 0 40px 40px 40px;
 }
 
@@ -71,10 +77,6 @@ ul{
 
 skills.full-height-container, education.full-height-container   {
   background-color: var(--portfolio-blue);
-}
-
-.footer-container{
-
 }
 
 banner{
@@ -108,6 +110,7 @@ banner{
   border-right: 27vw solid transparent;
   border-left: 27vw solid transparent;
   border-top: 27vw solid white;
+  z-index: 1;
 }
 
 .banner{
@@ -183,6 +186,7 @@ banner{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .portrait-container>img{
@@ -383,9 +387,6 @@ projects{
   padding: 10px;
 }
 
-.education{
-  /*overflow: hidden;*/
-}
 
 education::after{
   content: "";
@@ -394,7 +395,7 @@ education::after{
   bottom: 0;
   right: 0;
   position: absolute;
-  border: 200px solid rgb(171, 63, 73);;
+  border: 200px solid rgb(171, 63, 73);
 }
 
 .education{
@@ -558,11 +559,133 @@ skills{
   font-weight: 900;
 }
 
+skills::after{
+  content:"";
+  position: absolute;
+  bottom: -8vw;
+  right: 8vw;
+  width:0;
+  height:0;
+  border-right: 8vw solid transparent;
+  border-left: 8vw solid transparent;
+  border-top: 8vw solid var(--portfolio-blue);
+}
+
+portfolio-footer{
+  display: flex;
+}
+
 .portfolio-footer{
   height: 100%;
+  flex: 1;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.content{
+  height: 760px;
+  display: flex;
+}
+
+.central-content{
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.central-content::before{
+  content: "";
+  height: 800px;
+  width: 900px;
+  background-color: white;
+  left: 150px;
+  bottom: 150px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0 0 100% 100%;
+}
+
+div.footer-title{
+  display: inline-block;
+  text-align: right;
+  margin: 0 150px 150px 0;
+  align-self: flex-end;
+  z-index: 1;
+}
+
+h1.footer-title, h4.footer-title{
+  font-style: normal;
+  margin: 0;
+}
+
+h1.footer-title{
+  color: var(--portfolio-blue);
+  font-size: 150px;
+  line-height: 0.8em;
+}
+
+h4.footer-title{
+  color: var(--portfolio-red);
+  font-size: 30px;
+}
+
+div.chat-bubble{
+  width: 450px;
+  margin-left: 280px;
+  z-index: 1;
+}
+
+p.chat-bubble{
+  font-size: 18px;
+}
+
+span.chat-bubble{
+  display: block;
+}
+
+h4.chat-bubble{
+  color: black;
+  font-style: normal;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.map-block-container{
+  width: 700px;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+  margin: 0 40px 40px 0;
+}
+
+.map-text{
+  display: flex;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+h6.map-text{
+  position: absolute;
+  margin: 0;
+  font-size: 16px;
+  top: -1em;
+}
+
+h5.map-text{
+  font-weight: 500;
+}
+
+p.map-text{
+  color: black;
+  font-style: normal;
+  padding-left: 0.8em;
+}
+
+.map-container{
+  height: 430px;
+  background-color: aliceblue;
+  border: 1px solid darkgrey;
 }
 
 footer{
@@ -571,13 +694,13 @@ footer{
   justify-content: space-between;
   padding: 10px 60px;
   bottom: 0;
-  height: 200px;
+  height: 150px;
 }
 
 footer::before{
   content: "";
-  height: 500px;
-  width: 500px;
+  height: 650px;
+  width: 600px;
   background-color: var(--portfolio-blue);
   left: 0;
   bottom: 0;
