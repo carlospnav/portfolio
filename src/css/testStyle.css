@@ -599,7 +599,7 @@ portfolio-footer{
   height: 800px;
   width: 900px;
   background-color: white;
-  left: 150px;
+  left: 130px;
   bottom: 150px;
   position: absolute;
   z-index: 1;
@@ -630,14 +630,28 @@ h4.footer-title{
   font-size: 30px;
 }
 
+div.chat-bubble::after{
+  content: "";
+  height: 260px;
+  width: 300px;
+  background-color: white;
+  left: 470px;
+  bottom: 230px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 100%;
+}
+
 div.chat-bubble{
-  width: 450px;
+  width: 410px;
   margin-left: 280px;
-  z-index: 1;
+  z-index: 3;
 }
 
 p.chat-bubble{
+  position: relative;
   font-size: 18px;
+  z-index: 3;
 }
 
 span.chat-bubble{
@@ -645,18 +659,34 @@ span.chat-bubble{
 }
 
 h4.chat-bubble{
+  position: relative;
   color: black;
   font-style: normal;
   font-size: 30px;
-  margin: 20px;
+  margin: 25px 0 0 0;
+  text-align: right;
+  z-index: 3;
 }
 
 .map-block-container{
-  width: 700px;
+  position: relative;
+  width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 40px 40px 0;
+  z-index: 2;
+}
+
+.map-block-container::after{
+  content: "";
+  height: 70px;
+  width: 600px;
+  background-color: var(--portfolio-red);
+  left: -600px;
+  bottom: 50px;
+  position: absolute;
+  z-index: 1;
 }
 
 .map-text{
@@ -683,15 +713,16 @@ p.map-text{
 }
 
 .map-container{
-  height: 430px;
-  background-color: aliceblue;
-  border: 1px solid darkgrey;
+  height: 400px;
+  background-color: rgb(61, 61, 82);
+  border: 1px solid black;
 }
 
 footer{
+  position: relative;
   background-color: var(--portfolio-blue);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 10px 60px;
   bottom: 0;
   height: 150px;
@@ -700,11 +731,41 @@ footer{
 footer::before{
   content: "";
   height: 650px;
-  width: 600px;
+  width: 580px;
   background-color: var(--portfolio-blue);
   left: 0;
   bottom: 0;
   position: absolute;
+}
+
+footer::after{
+  content: "";
+  height: 0;
+  width: 0;
+  left: -230px;
+  bottom: 650px;
+  border-right: 12vw solid transparent;
+  border-left: 12vw solid transparent;
+  border-bottom: 10vw solid var(--portfolio-blue);
+  position: absolute;
+  z-index: 1;
+}
+
+.profile-image{
+  position: absolute;
+  z-index: 1;
+  height: 190px;
+  width: 190px;
+  top: -110px;
+  left: 430px;
+  padding: 15px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.profile-image > img{
+  max-width: 100%;
+  border-radius: 100%;
 }
 
 nav.media-links{
