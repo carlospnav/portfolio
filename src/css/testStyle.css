@@ -716,6 +716,11 @@ p.map-text{
   height: 400px;
   background-color: rgb(61, 61, 82);
   border: 1px solid black;
+  padding: 10px;
+}
+
+ng-map{
+  height: 100%;
 }
 
 footer{
