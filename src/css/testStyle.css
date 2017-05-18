@@ -20,12 +20,15 @@ body, html{
   margin: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6{
+p, h1, h2, h3, h4, h5, h6, .font-title, .font-text{
+  font-family: "Lato";
   margin: 0;
 }
 
 main{
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 ul{
@@ -33,22 +36,14 @@ ul{
 }
 
 .font-title{
-  font-size: 20px;
   font-weight: 900;
-  font-family: "Lato";
   font-style: italic;
   color: white;
 }
 
 .font-text{
-  font-size: 20px;
   font-weight: 300;
-  font-family: "Lato";
   color: black;
-}
-
-.left-space{
-  padding-left: 30px;
 }
 
 .container{
@@ -95,9 +90,9 @@ banner{
   top: 40px;
   width: 0;
   height: 0;
-  border-left: 30vw solid rgb(15, 15, 30);
+  border-left: 30vw solid var(--portfolio-blue);
   border-right: 40px solid transparent;
-  border-bottom: 40px solid rgb(15, 15, 30);
+  border-bottom: 40px solid var(--portfolio-blue);
 }
 
 .banner-menu-container::after{
@@ -201,7 +196,7 @@ projects{
 }
 
 .projects{
-  background-color: rgb(15, 15, 30);
+  background-color: var(--portfolio-blue);
   display: flex;
   flex-direction: column;
 }
@@ -222,7 +217,7 @@ projects{
 .section-title>h3{
   margin: 0 18% 0 0;
   font-size: 80px;
-  color: rgb(15, 15, 30);
+  color: var(--portfolio-blue);
   z-index: 1;
 }
 
@@ -299,6 +294,7 @@ projects{
 .project-content>h3{
   margin: 0;
   font-size: 60px;
+  padding-left: 30px;
 }
 
 .project-content{
@@ -395,7 +391,7 @@ education::after{
   bottom: 0;
   right: 0;
   position: absolute;
-  border: 200px solid rgb(171, 63, 73);
+  border: 200px solid var(--portfolio-red);
 }
 
 .education{
@@ -500,7 +496,7 @@ education::after{
 skills{
   display: block;
   height: 1080px;
-  background-color: rgb(15, 15, 30);
+  background-color: var(--portfolio-blue);
 }
 
 .skills{
@@ -690,6 +686,7 @@ h4.chat-bubble{
 }
 
 .map-text{
+  font-size: 20px;
   display: flex;
   position: relative;
   margin-bottom: 5px;
@@ -794,4 +791,11 @@ a.media-link{
 .media-link-title{
   padding-left: 20px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 1921px){
+  /*main{
+    max-width: 1920px;
+    margin: 0 auto;
+  }*/
 }
