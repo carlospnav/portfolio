@@ -37,8 +37,6 @@ banner, projects, education, skills{
 main{
   overflow: hidden;
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 ul{
@@ -117,7 +115,7 @@ banner{
 .banner{
   background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
   background-size: cover;
-  padding: 5vh 0 28vh 0;
+  padding: 3% 0 12.5% 0;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -135,7 +133,7 @@ banner{
 }
 
 .banner-title:first-of-type{
-  margin: 0 10vw;
+  margin: 0 10%;
   justify-content: flex-end;
   font-size: 70px;
   color: rgb(55, 55, 75);
@@ -797,18 +795,20 @@ a.media-link{
 }
 
 @media screen and (min-width: 1921px){
+
+  main{
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+    
   .banner-menu-container::before{
     border-left: 580px solid var(--portfolio-blue);
   }
 
   .banner-menu-container::after{
-    border-right: 500px solid transparent;
-    border-left: 500px solid transparent;
+    border-right: 515px solid transparent;
+    border-left: 515px solid transparent;
     border-top: 530px solid white;
-  }
-
-  .section-title>h3{
-    margin: 0 310px 0 0;
   }
 
   skills::after{
