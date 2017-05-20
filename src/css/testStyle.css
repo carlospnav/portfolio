@@ -16,6 +16,7 @@
 }
 
 body, html{
+  width: 100%;
   position: relative;
   margin: 0;
 }
@@ -25,8 +26,17 @@ p, h1, h2, h3, h4, h5, h6, .font-title, .font-text{
   margin: 0;
 }
 
+banner, projects, education, skills{
+  width: calc(100% - 80px);
+}
+
+.projects, .education, .skills{
+  background-color: var(--portfolio-blue);
+}
+
 main{
   overflow: hidden;
+  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -68,10 +78,6 @@ ul{
   display: block;
   position: relative;
 
-}
-
-skills.full-height-container, education.full-height-container   {
-  background-color: var(--portfolio-blue);
 }
 
 banner{
@@ -120,7 +126,7 @@ banner{
 }
 
 .banner-title{
-  margin: 0 15vw;
+  margin: 0 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,6 +205,7 @@ projects{
   background-color: var(--portfolio-blue);
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .section-title{
@@ -493,11 +500,7 @@ education::after{
   font-size: 16px;
 }
 
-skills{
-  display: block;
-  height: 1080px;
-  background-color: var(--portfolio-blue);
-}
+
 
 .skills{
   display: flex;
@@ -794,8 +797,22 @@ a.media-link{
 }
 
 @media screen and (min-width: 1921px){
-  /*main{
-    max-width: 1920px;
-    margin: 0 auto;
-  }*/
+  .banner-menu-container::before{
+    border-left: 580px solid var(--portfolio-blue);
+  }
+
+  .banner-menu-container::after{
+    border-right: 500px solid transparent;
+    border-left: 500px solid transparent;
+    border-top: 530px solid white;
+  }
+
+  .section-title>h3{
+    margin: 0 310px 0 0;
+  }
+
+  skills::after{
+    right: 100px;
+    bottom: -150px;
+  }
 }
