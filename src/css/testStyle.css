@@ -84,6 +84,8 @@ banner{
 }
 
 .banner-menu-container{
+  display: flex;
+  justify-content: center;
   position: relative;
   height: 80px;
 }
@@ -91,8 +93,9 @@ banner{
 .banner-menu-container::before{
   content: "";
   position: absolute;
-  top: 40px;
+  bottom: 0;
   width: 0;
+  left: 0;
   height: 0;
   border-left: 30vw solid var(--portfolio-blue);
   border-right: 40px solid transparent;
@@ -123,6 +126,13 @@ banner{
   justify-content: space-around;
 }
 
+.banner-name{
+  display: none;
+  font-size: 35px;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
 .banner-title{
   margin: 0 5%;
   display: flex;
@@ -139,6 +149,10 @@ banner{
   color: rgb(55, 55, 75);
 }
 
+.banner-title:nth-of-type(2){
+  font-weight: 100;
+}
+
 .banner-title:last-of-type{
   justify-content: flex-start;
   font-size: 40px;
@@ -148,25 +162,29 @@ banner{
 .banner-menu{
   position: absolute;
   min-height: 100%;
-  width: 100%;
+  width: 640px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .banner-menu > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .banner-menu li{
   display: inline-block;
-  margin: 0 15px;
   font-size: 35px;
+  margin: 0 10px;
 }
 
 .banner-menu li:nth-of-type(2){
-  margin: 0 10em 0 15px;
+  padding-right: 250px;
+  margin: 0 0 0 10px;
 }
 
 .banner-menu li>a{
@@ -176,10 +194,9 @@ banner{
 
 .portrait-container{
   position: absolute;
-  left: calc(50% - 10em);
-  top: -10em;
-  width: 20em;
-  height: 20em;
+  top: calc(0% - 125px);
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background-color: white;
   display: flex;
@@ -559,28 +576,33 @@ education::after{
 skills::after{
   content:"";
   position: absolute;
-  bottom: -8vw;
-  right: 8vw;
+  bottom: -17%;
+  right: 10%;
   width:0;
   height:0;
-  border-right: 8vw solid transparent;
-  border-left: 8vw solid transparent;
-  border-top: 8vw solid var(--portfolio-blue);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  border-top: 150px solid var(--portfolio-blue);
 }
 
 portfolio-footer{
+  position: relative;
   display: flex;
+  width: 100%;
 }
 
 .portfolio-footer{
   height: 100%;
-  flex: 1;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
 }
 
 .content{
   height: 760px;
+  width: 100%;
+  position: relative;
   display: flex;
 }
 
@@ -596,8 +618,8 @@ portfolio-footer{
   height: 800px;
   width: 900px;
   background-color: white;
-  left: 130px;
-  bottom: 150px;
+  left: 7%;
+  bottom: 0;
   position: absolute;
   z-index: 1;
   border-radius: 0 0 100% 100%;
@@ -630,16 +652,17 @@ h4.footer-title{
 div.chat-bubble::after{
   content: "";
   height: 260px;
-  width: 300px;
+  width: 70%;
   background-color: white;
-  left: 470px;
-  bottom: 230px;
+  left: 50%;
+  bottom: -35%;
   position: absolute;
   z-index: 2;
   border-radius: 100%;
 }
 
 div.chat-bubble{
+  position: relative;
   width: 410px;
   margin-left: 280px;
   z-index: 3;
@@ -661,7 +684,7 @@ h4.chat-bubble{
   font-style: normal;
   font-size: 30px;
   margin: 25px 0 0 0;
-  text-align: right;
+  text-align: center;
   z-index: 3;
 }
 
@@ -681,7 +704,7 @@ h4.chat-bubble{
   width: 600px;
   background-color: var(--portfolio-red);
   left: -600px;
-  bottom: 50px;
+  bottom: 70px;
   position: absolute;
   z-index: 1;
 }
@@ -747,9 +770,9 @@ footer::after{
   width: 0;
   left: -230px;
   bottom: 650px;
-  border-right: 12vw solid transparent;
-  border-left: 12vw solid transparent;
-  border-bottom: 10vw solid var(--portfolio-blue);
+  border-right: 230px solid transparent;
+  border-left: 230px solid transparent;
+  border-bottom: 225px solid var(--portfolio-blue);
   position: absolute;
   z-index: 1;
 }
@@ -794,7 +817,7 @@ a.media-link{
   font-weight: 500;
 }
 
-@media screen and (min-width: 1921px){
+/*@media screen and (min-width: 1921px){
 
   main{
     max-width: 1920px;
@@ -811,8 +834,154 @@ a.media-link{
     border-top: 530px solid white;
   }
 
-  skills::after{
-    right: 100px;
-    bottom: -150px;
+  footer::after{
+    left: -300px;
+    border-right: 300px solid transparent;
+    border-left: 300px solid transparent;
   }
-}
+
+  @media screen and (max-width: 1750px){
+    .banner{
+      padding: 3% 0 14% 0;
+    }
+
+    .section-title h3{
+      font-size: 70px;
+    }
+
+    footer::after{
+      border-right: 205px solid transparent;
+      border-left: 205px solid transparent;
+      border-bottom: 205px solid var(--portfolio-blue);
+    }
+*/
+
+  @media all and (max-width: 1800px){
+    .banner-menu-container::before{
+      border-left: 20vw solid var(--portfolio-blue)
+    }
+  }
+  @media all and (max-width: 1750px){
+    .banner-title:last-of-type{
+      color: var(--portfolio-blue);
+    }
+
+    .section > h3{
+      font-size: 50px;
+      margin-right: 21%;
+    }
+  }
+
+  @media all and (max-width: 1440px){
+
+    .portrait-container{
+      width: 200px;
+      height: 200px;
+      top: calc(0% - 100px);
+    }
+
+    .banner-menu-container::before{
+      display: none;
+    }
+  }
+
+  @media all and (max-width: 1180px){
+    .banner{
+      height: 600px;
+    }
+
+    .banner-title{
+      font-weight: 100;
+    }
+
+    .banner-title:first-of-type{
+      font-size: 50px;
+      font-weight: 900;
+    }
+
+    .banner-title:nth-of-type(3){
+      font-size: 30px;
+    }
+
+  }
+
+  @media all and (max-width: 1024px){
+    .banner-menu-container::after{
+      right: inherit;
+    }
+
+    .portrait-container{
+      width: 170px;
+      height: 170px;
+      top: calc(0% - 85px);
+    }
+  }
+
+  @media all and (max-width: 860px){
+    .banner{
+      height: 500px;
+    }
+
+    .banner-menu{
+      width: 100%;
+    }
+  }
+
+  @media all and (max-width: 640px){
+
+
+    .banner{
+      background-image: none;
+      background-color: white;
+      height: 300px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    .banner-menu li:nth-of-type(2){
+      padding-right: 40%;
+    }
+
+    .banner-title, .banner-name{
+      color: var(--portfolio-blue);
+    }
+
+    .banner-name{
+      display: block;
+    }
+
+    .banner-title:nth-of-type(2), .banner-title:nth-of-type(3){
+      display: none;  
+    }
+
+    .banner-title:first-of-type{
+      display: flex;
+      font-size: 14px;
+      font-weight: 100;
+      justify-content: center;
+      background-color: white;
+    }
+
+    .portrait-container{
+      width: 130px;
+      height: 130px;
+      top: calc(0% - 65px);
+    }
+  }
+
+  @media all and (max-width: 540px){
+
+    .banner{
+      height: 180px;
+    }
+
+    .portrait-container{
+      display: none;
+    }
+
+    .banner-menu li:nth-of-type(2){
+      padding-right: 0;
+    }
+
+    
+  }
