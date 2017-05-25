@@ -6,7 +6,7 @@ angular
         this.titles = [
           { name: "Web Developer" },
           { name: "Weekend Designer" },
-          { name: "World Traveller" }   
+          { name: "Carlos Navarrete" }   
         ],
         this.img = {
           url: "dist/staticimages/gifoto.jpg",
