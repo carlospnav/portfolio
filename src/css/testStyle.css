@@ -86,7 +86,7 @@ banner{
   justify-content: flex-start;
   background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
   background-size: cover;
-  padding-top: 35px 10px 10px 10px;
+  padding: 35px 10px 10px 10px;
 }
 
 .banner-title{
