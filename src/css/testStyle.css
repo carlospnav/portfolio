@@ -1,12 +1,6 @@
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
-/*  QUICK TEST */
-
-projects{
-  height: 600px;
-}
-
 /* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
@@ -49,7 +43,7 @@ p, h1, h2, h3, h4, h5, h6, ul{
 
 banner, projects, education, skills{
   display: flex;
-  width: calc(100% - 40px);
+  width: 100%;
 }
 
 .projects, .education, .skills{
@@ -57,6 +51,7 @@ banner, projects, education, skills{
 }
 
 .projects, .education, .skills, .portfolio-footer{
+  position: relative;
   width: 100%;
 }
 
@@ -64,7 +59,7 @@ banner, projects, education, skills{
 
 .container{
   position: relative; 
-  margin: 0 20px 20px 20px;
+
 }
 
 .top-container{
@@ -75,6 +70,7 @@ banner, projects, education, skills{
 /* BANNER MODULE RULES */
 
 banner{
+  width: 100%;
   flex-direction: column;
 }
 
@@ -84,9 +80,9 @@ banner{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
+  background-image: url(/dist/banner/test9.jpg);
   background-size: cover;
-  padding: 35px 10px 10px 10px;
+  padding: 20px;
 }
 
 .banner-title{
@@ -100,6 +96,8 @@ banner{
   order: 2;
   font-size: 16px;
   font-weight: 100;
+  color: #333;
+  padding-top: 5px;
 }
 
 .banner-title:nth-child(2){
@@ -108,11 +106,11 @@ banner{
 
 .banner-title:nth-child(3){
   order: 1;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  color: rgb(55, 55, 75);
+  color: #333; 
 }
 
 .banner-portrait{
@@ -150,7 +148,7 @@ banner{
   justify-content: space-between;
   align-items: center;
   font-size: 35px;
-  margin: 0 10px;
+  margin: 0 30px;
 }
 
 .banner-menu-icons > li{
@@ -158,6 +156,10 @@ banner{
 }
 
 /* PROJECTS MODULES RULES */
+
+projects{
+  margin: 0 0 20px 0;
+}
 
 .section-title::after{
   content:"";
@@ -176,7 +178,8 @@ banner{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 80px;
+  margin-bottom: 100px;
 }
 
 .section-title > h1{
@@ -192,7 +195,58 @@ banner{
   color: white;
 }
 
+.featured{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+  border-bottom: 20px solid white;
+}
 
+.featured-img-container{
+  width: 100%;
+  order: 2;
+}
+.featured-img-container > img{
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.project-title{
+  height: 65px;
+  width: 100%;
+  order: 1;
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  line-height: 60px;
+  background: linear-gradient(to left, rgb(171, 63, 73), rgba(140, 40, 70, 1));
+}
+
+.project-subtitle{
+  order: 3;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to left, rgb(171, 63, 73), rgba(140, 40, 70, 1));
+}
+
+.project-bulletpoints{
+  order: 3;
+  font-size: 16px;
+  padding: 20px 20px 20px 30px;
+  font-weight: 100;
+  color: white;
+}
+
+.bulletpoint{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
 /*
 body, html{
   width: 100%;
@@ -1262,9 +1316,20 @@ a.media-link{
   }*/
 
 @media all and (min-width: 460px){
+  banner{
+    margin: 20px 20px 0 20px;
+  }
+  banner, projects, education, skills{
+    width: calc(100% - 40px);
+  }
+
+  projects, education, skills{
+    margin: 0 20px 20px 20px;
+  }
+
   .banner{
     height: 260px;
-    padding-top: 55px;
+    padding: 55px 10px 10px 10px;
   }
 
   .section-title{

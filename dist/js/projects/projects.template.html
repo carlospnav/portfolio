@@ -3,30 +3,21 @@
     <h1 class="title-font">Featured</h3>
     <h3 class="title-font">Projects</h1>
   </div>
-  <!--<article ng-repeat="project in $ctrl.featured.items" class="featured container" ng-class="[{'even-project': $odd}, {'featured-top': $last || $odd}, {'featured-bot': $first || $odd}]">
-    <div class="projects-img-container">
+  <article ng-repeat="project in $ctrl.featured.items" class="featured container" ng-class="[{'even-project': $odd}, {'featured-top': $last || $odd}, {'featured-bot': $first || $odd}]">
+    <div class="featured-img-container">
       <img ng-src="{{project.imgSrc}}" alt="{{project.imgAlt}}" class="project-img" />
     </div>
-    <div class="projects-content-container">
-      <div class="project-content">
-        <h3 class="font-title left-space">{{project.title}}</h3>
-        <div class="project-subtitle font-title">
-          <h6>{{project.subtitle | uppercase}}</h6>
-        </div>
-        <div class="project-bulletpoints font-title">
-          <ul >
-            <li ng-repeat="bulletpoint in project.bulletpoints">
-              {{bulletpoint}}
-            </li>
-          </ul>
-        </div>
-
-      </div>
-      <nav class="projects-github-container">
-      </nav>
-    </div>
+    <h3 class="project-title">{{project.title}}</h3>
+    <h6 class="project-subtitle">{{project.subtitle | uppercase}}</h6>
+    <ul class="project-bulletpoints">
+      <li ng-repeat="bulletpoint in project.bulletpoints">
+        {{bulletpoint}}
+      </li>
+    </ul>
+    <nav class="projects-github-container">
+    </nav>
   </article>
-  <div class="other-projects-container container">
+  <!--<div class="other-projects-container container">
     <div class="other-projects">
       <article ng-repeat="project in $ctrl.others" class="other" ng-class="{ 'others-unavailable': project.title.length === 0 }">
         <img ng-src="{{project.imgUrl}}" alt="{{project.imgAlt}}" class="projects-img" />

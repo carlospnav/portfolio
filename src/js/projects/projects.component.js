@@ -9,7 +9,7 @@ angular.module('projects')
         items: [
           { 
             title: 'Neighborhood Map',
-            imgSrc: 'dist/images/projects/neighborhoodMap.jpg',
+            imgSrc: 'dist/images/projects/nbm.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A map of central Edinburgh with tourist information on select points of interest:', 
             bulletpoints: [
