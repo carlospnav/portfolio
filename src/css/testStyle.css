@@ -226,6 +226,7 @@ projects{
 }
 
 .project-subtitle{
+  width: 100%;
   order: 3;
   color: white;
   font-weight: 100;
@@ -1416,8 +1417,21 @@ a.media-link{
 }
 
 @media all and (min-width: 860px){
+  banner, projects, education, skills{
+    width: calc(100% - 80px);
+  }
+
+  projects, education, skills {
+    margin: 0 40px 40px 40px;
+  }
+
+  banner{
+    margin: 40px 40px 0 40px;
+  }
+
   .banner{
     padding-top: 80px;
+    background-image: url("/dist/banner/banner-xl-2x-v2.jpg");
   }
 
   .banner-title:nth-child(3){
@@ -1437,6 +1451,10 @@ a.media-link{
 
   .banner-menu-icons:nth-child(2){
     padding-right: 120px;
+  }
+
+  .section-title{
+    margin-bottom: 200px;
   }
 
   .section-title > h1{
@@ -1485,6 +1503,46 @@ a.media-link{
 
   .section-title{
     padding: 10% 12%;
+    margin-bottom: 100px;
+  }
+
+  .featured{
+    width: calc(100% - 160px);
+    margin: 0 auto 80px auto;
+    border: none;
+  }
+
+  .project-title{
+    font-size: 52px;
+    text-align: left;
+    background: none;
+  }
+
+  .project-title > span{
+    color: var(--portfolio-red);
+  }
+
+  .project-subtitle{
+    background: linear-gradient(to right, rgb(90, 90, 110), rgb(15, 15, 30));
+    padding: 15px 0;
+    font-size: 14px;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+  }
+
+  .project-bulletpoints{
+    width: 100%;
+    background: linear-gradient(to right, rgb(71, 73, 93), rgb(15, 15, 30));
+    padding: 40px;
+    border-bottom: 10px solid white;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+  }
+
+  .project-img{
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
   }
 }
 

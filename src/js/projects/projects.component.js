@@ -8,7 +8,7 @@ angular.module('projects')
       this.featured = {
         items: [
           { 
-            title: 'Neighborhood Map',
+            title: ['Neighborhood', 'Map'],
             imgSrc: 'dist/images/projects/nbm.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A map of central Edinburgh with tourist information on select points of interest:', 
@@ -24,7 +24,7 @@ angular.module('projects')
             githubLink: ''
           },
           { 
-            title: 'Arcade Game',
+            title: ['Arcade', 'Game'],
             imgSrc: 'dist/images/projects/arcadeGame.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A version of Frogger, an old game from the 80s where the goal was to cross a street under heavy traffic:', 
@@ -40,7 +40,7 @@ angular.module('projects')
             githubLink: ''
           },
           { 
-            title: 'This Website',
+            title: ['This', 'Website'],
             imgSrc: 'dist/images/projects/portfolioWebsite.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'My Portfolio Website. Intended to be an alternative, interactive version of my resume:', 
