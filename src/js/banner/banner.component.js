@@ -4,9 +4,8 @@ angular
       templateUrl: "dist/js/banner/banner.template.html",
       controller: function BannerController(Github){
         this.titles = [
+          { name: "Carlos Navarrete" },
           { name: "Web Developer" },
-          { name: "Weekend Designer" },
-          { name: "Carlos Navarrete" }   
         ],
         this.img = {
           url: "dist/staticimages/gifoto.jpg",
