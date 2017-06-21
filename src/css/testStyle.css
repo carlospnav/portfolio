@@ -193,15 +193,17 @@ projects{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 0 0 40px 0;
-  border-top: 1px dashed white;
+  margin: 0 0 70px 0;
+  /*border-top: 1px dashed white;*/
 }
 
 .featured-img-container{
+  margin: 0 20px;
   width: 100%;
   order: 2;
-  border-top: 1px solid var(--portfolio-blue);
-  border-bottom: 1px solid white;
+  border: 1px solid white;
+  /*border-top: 1px solid var(--portfolio-blue);
+  border-bottom: 1px solid white;*/
 }
 .featured-img-container > img{
   max-width: 100%;
@@ -216,7 +218,8 @@ projects{
   font-size: 34px;
   font-style: italic;
   padding: 15px;
-  border-bottom: 1px solid white;
+  text-align: center;
+  /*border-bottom: 1px solid white;*/
 }
 
   .project-title > span{
@@ -230,13 +233,15 @@ projects{
   font-weight: 100;
   text-align: center;
   padding: 20px;
+  margin: 20px;
   background-color:  rgba(140, 40, 70, 1);
 }
 
 .project-bulletpoints{
   order: 3;
   font-size: 16px;
-  padding: 20px 20px 20px 30px;
+  padding: 0 20px 20px 30px;
+  margin: 0 10px;
   font-weight: 100;
   color: white;
 }
@@ -245,6 +250,57 @@ projects{
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
+}
+
+.other-projects-container{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20px;
+}
+
+.other-projects-title{
+  order: 1;
+  color: white;
+  margin-left: 20px;
+}
+
+.other-projects{
+  order: 2;
+  width: 100%;
+}
+
+.other{
+  height: 80px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: gray;
+  padding-left: 10px;
+}
+
+.other > img{
+  max-width: 60px;
+  height: 60px;
+}
+
+.other-name{
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 20px;
+  font-weight: 300;
+  flex: 1;
+}
+
+.other-name > a{
+  margin-left: 10px;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
 }
 /*
 body, html{

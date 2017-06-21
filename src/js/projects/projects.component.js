@@ -108,13 +108,13 @@ angular.module('projects')
           description: 'A photo management application, written in the .NET stack focused entirely on the Back-End side.'
         },
         {
-          title: '',
+          title: 'Soon',
           imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
           imgAlt: 'Project unavailable.',
           description: 'Project yet unavailable.'
         },  
         {
-          title: '',
+          title: 'Soon',
           imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
           imgAlt: 'Project unavailable.',
           description: 'Project yet unavailable.'
