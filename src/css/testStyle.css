@@ -187,16 +187,14 @@ projects{
 }
 
 .featured{
-  width: 100%;
+  width: calc(100% - 40px);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 0 0 90px 0;
-  /*border-top: 1px dashed white;*/
+  margin: 0 20px 90px 20px;
 }
 
 .featured-img-container{
-  margin: 0 20px;
   width: 100%;
   order: 2;
 }
@@ -209,33 +207,29 @@ projects{
 
 .project-title{
   width: 100%;
-  order: 1;
+  order: 2;
   color: white;
   font-size: 32px;
   font-style: italic;
   padding: 25px 35px 0 35px;
-  margin: 0 20px;
   text-align: center;
   background-color: rgba(140, 40, 70, 1);
-  /*border-bottom: 1px solid white;*/
 }
 
 .project-subtitle{
   width: 100%;
-  order: 1;
+  order: 2;
   color: white;
   font-weight: 100;
   text-align: center;
   padding: 20px;
-  margin: 0 20px;
   background-color:  rgba(140, 40, 70, 1);
 }
 
 .project-bulletpoints{
-  order: 3;
+  order: 2;
   font-size: 16px;
   padding: 15px 20px 20px 30px;
-  margin: 0 20px;
   font-weight: 100;
   color: white;
   background-color: rgb(55, 55, 80);
@@ -245,6 +239,10 @@ projects{
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
+}
+
+.projects-github-container{
+  order: 2;
 }
 
 .other-projects-container{
@@ -1382,17 +1380,16 @@ a.media-link{
     padding: 55px 10px 10px 10px;
   }
 
-  .section-title{
-    padding: 80px 0 120px 40px;
-  }
   .section-title > h3{
-    top: -5px;
-    left: 115px;
-    font-size: 28px;
+    line-height: 10px;
   }
 
   .section-title > h1{
-    font-size: 60px;
+    font-size: 70px;
+  }
+
+  .project-bulletpoints{
+    padding: 30px 40px;
   }
 }
 
@@ -1414,14 +1411,20 @@ a.media-link{
   }
 
   .section-title > h3{
-    top: 50px;
-    left: 10px;
     font-size: 45px;
   }
 
   .project-title{
     font-size: 45px;
-    padding: 20px 30px;
+    padding: 20px 30px 10px 30px;
+  }
+
+  .project-subtitle{
+    padding: 10px 20px 20px 20px;
+  }
+
+  .project-bulletpoints{
+    padding: 40px 60px;
   }
 }
 
@@ -1434,13 +1437,17 @@ a.media-link{
     height: 80px;
   }
 
+  .featured{
+    width: calc(100% - 80px);
+    margin: 0 auto 60px auto;
+  }
 
   .banner-title:first-child{
     font-size: 45px;
   }
 
   .section-title{
-    padding: 80px 0 160px 8%;
+    padding: 80px 0 140px 0;
   }
 
   .section-title > h1{
@@ -1449,12 +1456,18 @@ a.media-link{
 
   .section-title > h3{
     font-size: 45px;
-    left: 20px;
-    top: 70px;
   }
 
   .project-title{
     font-size: 50px;
+  }
+
+  .project-subtitle{
+    padding: 20px 20px 30px 20px;
+  }
+
+  .other-projects-container{
+    margin: 0 40px;
   }
 }
 
@@ -1468,8 +1481,36 @@ a.media-link{
   }
 
   .section-title > h3{
+    position: absolute;
+    top: 210px;
+    left: initial;
     font-size: 45px;
-    left: 185px;
+  }
+
+  .project-bulletpoints{
+    padding: 40px 60px;
+    height: 300px;
+    width: 85%;
+  }
+
+  .projects-github-container{
+    width: 15%;
+  }
+
+  .project-title > span{
+    color: rgb(175,65,85);
+  }
+
+  .project-title{
+    background: linear-gradient(to right, rgb(171, 63, 83), rgb(15,15,30));
+  }
+
+  .project-subtitle{
+    background: linear-gradient(to right, rgb(171, 63, 83), rgb(15,15,30));
+  }
+
+  .project-bulletpoints{
+    background: linear-gradient(to right, rgb(55, 55, 80), rgb(15, 15, 30));
   }
 }
 
@@ -1495,10 +1536,6 @@ a.media-link{
     font-size: 55px;
   }
 
-  .section-title{
-    border-bottom: 1px dashed white;
-  }
-
   .section-title::after{
     right: 5vw;
     border-right: 90px solid transparent;
@@ -1516,27 +1553,12 @@ a.media-link{
     padding-right: 120px;
   }
 
-  .featured{
-    width: calc(100% - 80px);
-    margin: 0 auto 80px auto;
-    border-top: none;
-  }
-
-  .featured-img-container{
-    border: 10px solid white;
-  }
-
-  .project-subtitle{
-    border-left: 10px solid white;
-    border-right: 10px solid white;
+  .featured-img-container > img{
+    border: 1px solid black;
   }
 
   .project-bulletpoints{
-    width: 100%;
-    background-color: rgb(55, 55, 80);
-    border-bottom: 10px solid white;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
+    padding: 40px 60px;
   }  
 
   .section-title > h1{
@@ -1544,9 +1566,8 @@ a.media-link{
   }
 
   .section-title > h3{
-    font-size: 55px;
-    top: 85px;
-    left: 223px;
+    font-size: 45px;
+    top: 235px;
   }
 }
  
@@ -1584,34 +1605,32 @@ a.media-link{
   }
 
   .section-title{
-    padding: 10% 12% 20% 12%;
-    margin-bottom: 100px;
+    padding: 140px 0 200px 0;
+  }
+
+  .section-title>h3{
+    top: 290px;
   }
 
   .featured{
-    max-width: 940px;
-    margin: 0 auto 80px auto;
-    border: none;
+    width: 700px;
+    margin: 0 auto 180px auto;
   }
 
   .project-title{
-    font-size: 52px;
-    text-align: left;
-    background: none;
-  }
-
-  .project-title > span{
-    color: var(--portfolio-red);
+    order: 2;
+    padding: 20px 0 10px 30px;
+    border: none;
   }
 
   .project-subtitle{
-    padding: 15px 0;
-    font-size: 14px;
+    order: 2;
+    padding: 10px 15px 30px 15px;
+    background: linear-gradient(to right, rgb(171, 63, 73), rgb(15,15,30));
+    border: none;
   }
 
-  .project-bulletpoints{
-    padding: 40px;
-  }
+
 
 
 }
@@ -1636,14 +1655,6 @@ a.media-link{
   .section-title{
     border: none;
     margin: 0;
-  }
-
-  .featured{
-    max-width: 1200px;
-    height: 480px;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0 auto 180px auto;
   }
 
   .featured-img-container{
@@ -1671,10 +1682,6 @@ a.media-link{
     height: 280px;
     border: none;
     background: linear-gradient(to right, rgb(55, 55, 80), rgb(15, 15, 30));
-  }
-
-  .featured:first-of-type{
-    margin-top: 100px
   }
 
   .section-title > h1{
