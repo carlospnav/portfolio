@@ -3,12 +3,14 @@
     <h1 class="title-font">Projects</h3>
     <h3 class="title-font">Featured</h1>
   </div>
-  <article ng-repeat="project in $ctrl.featured.items" class="featured" ng-class="[{'even-project': $odd}, {'featured-top': $last || $odd}, {'featured-bot': $first || $odd}]">
+  <article ng-repeat="project in $ctrl.featured.items" class="featured" ng-class="[{'even-project': $odd}, {'featured-top': $first || $odd}, {'featured-bot': $last || $odd}]">
     <div class="featured-img-container">
       <img ng-src="{{project.imgSrc}}" alt="{{project.imgAlt}}" class="project-img" />
     </div>
-    <h3 class="project-title">{{ project.title[0] }} <span>{{ project.title[1] }}</span></h3>
-    <h6 class="project-subtitle">{{project.subtitle | uppercase}}</h6>
+    <div class="project-titles">
+      <h3 ng-class="{'long-title': project.title[0].length + project.title[1].length > 12 }" class="project-title">{{ project.title[0] }} <span>{{ project.title[1] }}</span></h3>
+      <h6 class="project-subtitle">{{project.subtitle | uppercase}}</h6>
+    </div>
     <ul class="project-bulletpoints">
       <li ng-repeat="bulletpoint in project.bulletpoints">
         {{bulletpoint}}

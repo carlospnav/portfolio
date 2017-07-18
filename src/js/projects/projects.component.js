@@ -9,7 +9,7 @@ angular.module('projects')
         items: [
           { 
             title: ['Neighborhood', 'Map'],
-            imgSrc: 'dist/images/projects/nbm.jpg',
+            imgSrc: 'dist/images/projects/testLocL.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A map of central Edinburgh with tourist information on select points of interest:', 
             bulletpoints: [
@@ -25,7 +25,7 @@ angular.module('projects')
           },
           { 
             title: ['Arcade', 'Game'],
-            imgSrc: 'dist/images/projects/arcadeGame.jpg',
+            imgSrc: 'dist/images/projects/testLocL.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'A version of Frogger, an old game from the 80s where the goal was to cross a street under heavy traffic:', 
             bulletpoints: [
@@ -41,7 +41,7 @@ angular.module('projects')
           },
           { 
             title: ['This', 'Website'],
-            imgSrc: 'dist/images/projects/portfolioWebsite.jpg',
+            imgSrc: 'dist/images/projects/testLocL.jpg',
             imgAlt: 'Image of the project: ' + this.title + '.',
             subtitle: 'My Portfolio Website. Intended to be an alternative, interactive version of my resume:', 
             bulletpoints: [
@@ -97,25 +97,25 @@ angular.module('projects')
       this.others = [
         {
           title: 'Budgeteer',
-          imgUrl: 'dist/images/projects/thumbs/budgeteer.jpg',
+          imgUrl: 'dist/images/projects/thumbs/testLoc.jpg',
           imgAlt: 'Image of the project: ' + this.title + '.',
           description: 'A basic shell for an organization/personal finance application.'
         },
         {
           title: 'HomeSite',
-          imgUrl: 'dist/images/projects/thumbs/homesite.jpg',
+          imgUrl: 'dist/images/projects/thumbs/testLoc.jpg',
           imgAlt: 'Image of the project: ' + this.title + '.',
           description: 'A photo management application, written in the .NET stack focused entirely on the Back-End side.'
         },
         {
           title: 'Soon',
-          imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
+          imgUrl: 'dist/images/projects/thumbs/testLoc.jpg',
           imgAlt: 'Project unavailable.',
           description: 'Project yet unavailable.'
         },  
         {
           title: 'Soon',
-          imgUrl: 'dist/images/projects/thumbs/unavailable.jpg',
+          imgUrl: 'dist/images/projects/thumbs/testLoc.jpg',
           imgAlt: 'Project unavailable.',
           description: 'Project yet unavailable.'
         },    

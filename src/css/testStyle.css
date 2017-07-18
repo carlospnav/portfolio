@@ -9,6 +9,8 @@
 :root{
   --portfolio-blue: rgb(15, 15, 30);
   --portfolio-red: rgb(171, 63, 73);
+  --portfolio-orange: rgb(160, 50, 70);
+  --portfolio-purple: #29233d;
 }
 
 /* GENERALS */
@@ -80,7 +82,8 @@ banner{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  background-image: url(/dist/banner/test9.jpg);
+  /*background-image: url(/dist/banner/test9.jpg);*/
+  background-image: url(/dist/banner/banner-xl-2x-v2.jpg);
   background-size: cover;
   padding: 40px;
 }
@@ -156,6 +159,13 @@ projects{
   margin: 0 0 20px 0;
 }
 
+.projects{
+  background-color: var(--portfolio-purple);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .section-title::after{
   content:"";
   position: absolute;
@@ -200,39 +210,37 @@ projects{
 }
 .featured-img-container > img{
   max-width: 100%;
-  border-bottom: 1px solid var(--portfolio-blue);
-  border-top: 1px solid var(--portfolio-blue);
   vertical-align: top;
 }
 
 .project-title{
   width: 100%;
-  order: 2;
+  order: 1;
   color: white;
   font-size: 32px;
   font-style: italic;
-  padding: 25px 35px 0 35px;
+  padding: 35px 30px 20px 30px;
   text-align: center;
-  background-color: rgba(140, 40, 70, 1);
+  background-color: var(--portfolio-orange);
 }
 
 .project-subtitle{
   width: 100%;
-  order: 2;
+  order: 1;
   color: white;
   font-weight: 100;
   text-align: center;
-  padding: 20px;
-  background-color:  rgba(140, 40, 70, 1);
+  padding: 10px 20px 40px 20px;
+  background-color:  var(--portfolio-orange);
 }
 
 .project-bulletpoints{
-  order: 2;
+  order: 1;
   font-size: 16px;
-  padding: 15px 20px 20px 30px;
+  padding: 30px 30px 30px 40px;
   font-weight: 100;
   color: white;
-  background-color: rgb(55, 55, 80);
+  background-color: var(--portfolio-red);
 }
 
 .bulletpoint{
@@ -242,13 +250,27 @@ projects{
 }
 
 .projects-github-container{
-  order: 2;
+  order: 1;
+  width: 100%;
+  height: 100px;
+  background-color: var(--portfolio-orange);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.projects-github-container > a{
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
 }
 
 .other-projects-container{
   display: flex;
   flex-flow: row wrap;
-  margin-top: 20px;
+  margin: 0 20px;
+  width: 100%;
 }
 
 .other-projects-title{
@@ -264,9 +286,9 @@ projects{
 
 .other{
   height: 80px;
-  margin: 20px;
+  margin: 20px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   background-color: gray;
   padding-left: 10px;
@@ -1362,8 +1384,7 @@ a.media-link{
       font-size: 50px;
     }
   }*/
-
-@media all and (min-width: 460px){
+@media all and (min-width: 440px){
   banner{
     margin: 20px 20px 0 20px;
   }
@@ -1380,6 +1401,10 @@ a.media-link{
     padding: 55px 10px 10px 10px;
   }
 
+  .featured{
+    max-width: 440px;
+  }
+
   .section-title > h3{
     line-height: 10px;
   }
@@ -1389,7 +1414,12 @@ a.media-link{
   }
 
   .project-bulletpoints{
-    padding: 30px 40px;
+    padding: 50px;
+  }
+
+  .other-projects-container{
+    max-width: 440px;
+    margin-bottom: 90px;
   }
 }
 
@@ -1467,7 +1497,7 @@ a.media-link{
   }
 
   .other-projects-container{
-    margin: 0 40px;
+    margin: 0 40px 40px 40px;
   }
 }
 
@@ -1486,31 +1516,17 @@ a.media-link{
     left: initial;
     font-size: 45px;
   }
-
-  .project-bulletpoints{
-    padding: 40px 60px;
-    height: 300px;
-    width: 85%;
-  }
-
-  .projects-github-container{
-    width: 15%;
-  }
-
-  .project-title > span{
-    color: rgb(175,65,85);
-  }
-
+  
   .project-title{
-    background: linear-gradient(to right, rgb(171, 63, 83), rgb(15,15,30));
+    padding: 50px;
   }
 
   .project-subtitle{
-    background: linear-gradient(to right, rgb(171, 63, 83), rgb(15,15,30));
+    padding: 0 20px 40px 20px;
   }
 
   .project-bulletpoints{
-    background: linear-gradient(to right, rgb(55, 55, 80), rgb(15, 15, 30));
+    padding: 60px;
   }
 }
 
@@ -1553,13 +1569,9 @@ a.media-link{
     padding-right: 120px;
   }
 
-  .featured-img-container > img{
-    border: 1px solid black;
+  .featured{
+    margin: 40px;
   }
-
-  .project-bulletpoints{
-    padding: 40px 60px;
-  }  
 
   .section-title > h1{
     font-size: 120px;
@@ -1571,6 +1583,17 @@ a.media-link{
   }
 }
  
+ @media all and (min-width: 920px){
+   .featured{
+     max-width: 500px;
+   }
+
+   .other-projects-container{
+     max-width: 500px;
+     margin: 90px 0 120px 0;
+   }
+ }
+
 @media all and (min-width: 1024px){
   .top-container{
     margin: 40px 40px 0 40px;
@@ -1612,27 +1635,41 @@ a.media-link{
     top: 290px;
   }
 
+  .other-projects-container{
+    margin: 40px;
+  }
+}
+
+@media all and (min-width: 1150px){
   .featured{
-    width: 700px;
-    margin: 0 auto 180px auto;
+    max-width: 440px;
+  }
+
+  .long-title{
+    font-size: 40px;
   }
 
   .project-title{
-    order: 2;
-    padding: 20px 0 10px 30px;
-    border: none;
+    height: 180px;
   }
 
-  .project-subtitle{
-    order: 2;
-    padding: 10px 15px 30px 15px;
-    background: linear-gradient(to right, rgb(171, 63, 73), rgb(15,15,30));
-    border: none;
+  .project-bulletpoints{
+    height: 300px;
   }
 
+  .other-projects-container{
+    display: flex;
+    flex-flow: column wrap;
+    width: 440px;
+    margin: 40px;
+  }
 
-
-
+  .other-projects-title{
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-style: italic;
+  }
 }
 
 @media all and (min-width: 1440px){
@@ -1657,33 +1694,6 @@ a.media-link{
     margin: 0;
   }
 
-  .featured-img-container{
-    order: 1;
-    width: 700px;
-    height: 480px;
-  }
-
-  .project-title{
-    padding: 0 0 10px 30px;
-    border: none;
-  }
-
-  .project-subtitle{
-    order: 1;
-    width: 500px;
-    padding: 15px 15px;
-    background: linear-gradient(to right, rgb(171, 63, 73), rgb(15,15,30));
-    border: none;
-  }
-
-  .project-bulletpoints{
-    order: 1;
-    width: 500px;
-    height: 280px;
-    border: none;
-    background: linear-gradient(to right, rgb(55, 55, 80), rgb(15, 15, 30));
-  }
-
   .section-title > h1{
     font-size: 160px;
   }
@@ -1696,6 +1706,79 @@ a.media-link{
 
   .banner-menu-icons{
     margin: 0 30% 0 20px;
+  }
+
+  .other-projects-container{
+    max-width: 440px;
+    height: 1085px;
+  }
+
+  .other-projects-title{
+    font-size: 14px;
+    font-style: normal;
+    order: 2;
+    font-weight: 100;
+    margin: 20px 0 0 0;
+  }
+
+  .other-projects-title > p{
+    font-size: 60px;
+  }
+
+  .other-projects{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
+  }
+  .other{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 220px;
+    align-items: flex-start;
+  }
+
+  .other-name{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    height: 220px;
+    background: linear-gradient(to bottom, var(--portfolio-orange) 0, var(--portfolio-orange) 25%, var(--portfolio-red) 100%);
+  }
+
+  .other-name > p{
+    margin: -5px 0;
+    position: absolute;
+    top: 30px;
+    font-size: 18px;
+  }
+
+  .other-name > a{
+    margin-bottom: 15px;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .other-name .entypo-github-circled::before{
+    background-color: var(--portfolio-red);
+    padding: 25px;
+    margin-bottom: -45px;
+    border-radius: 50%;
+  }
+
+  .other > img{
+    max-width: 50%;
+    height: auto;
+    order: 2;
+  }
+}
+
+@media all and (min-width: 1658px){
+  .projects{
+    justify-content: space-between;
   }
 }
 
@@ -1719,14 +1802,6 @@ a.media-link{
 
   .banner-portrait{
     display: flex;
-  }
-
-  .featured{
-    max-width: 1300px;
-  }
-
-  .project-title{
-    font-size: 65px;
   }
 
   .section-title > h1{
