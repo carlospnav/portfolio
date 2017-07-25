@@ -1,8 +1,8 @@
 <section class="skills">
-  <aside>
+  <aside class="skills-list">
     <div class="skills-container container">
       <div class="font-text skill" ng-repeat="skill in $ctrl.skills" >
-        <span ng-style="{{skill.size}}">{{skill.name}}</span>
+        <span class="{{skill.class}} skill-name" >{{skill.name}}</span>
       </div>
     </div>
   </aside> 
