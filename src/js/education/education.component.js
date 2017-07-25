@@ -26,6 +26,16 @@ angular.module('education')
         thumbAlt: 'Logo of ' + this.name
       },
       {
+        name: 'Udacity',
+        degree: 'Nanodegree',
+        date: '2016-2017',
+        program: 'React + Redux',
+        description: 'Spectrum blotantis pocolinearos capadocium spector ehshn aopieauhsh ' +
+        'heahai jhsanhsoahs asosp hsaishh eaeuoi sapsosopaso sujaosjisoj ajsoja saojjo ososl',
+        thumbnail: 'dist/images/education/udacity.jpg',
+        thumbAlt: 'Logo of ' + this.name
+      },
+      {
         name: 'Microsoft',
         degree: 'Certification',
         date: '2015',

@@ -317,6 +317,70 @@ projects{
   color: white;
   text-decoration: none;
 }
+
+/* Education Component Rules */
+
+.education{
+  background-color: var(--portfolio-purple);
+}
+
+.education-title-container{
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.education-title{
+    font-size: 52px;
+    font-style: italic;
+    color: #fff;
+}
+
+.school-square{
+  margin: 0 20px;
+  color: white;
+  font-weight: 100;
+}
+
+.school{
+  margin: 60px 0;
+  font-size: 18px;
+  background-color: var(--portfolio-orange);
+}
+
+.school-header{
+  padding: 30px;
+}
+
+.school-title{
+  font-size: 19px;
+}
+
+.school-date{
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.school-program{
+  margin: 20px 0 0 0;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+div.school-description{
+  background-color: var(--portfolio-red);
+  padding: 30px;
+}
+
+.school-logo-location{
+  display: flex;
+  padding: 30px;
+}
+
+.school-logo-location > img{
+  padding-right: 30px;
+}
+
 /*
 body, html{
   width: 100%;
@@ -1421,6 +1485,20 @@ a.media-link{
     max-width: 440px;
     margin-bottom: 90px;
   }
+
+  .education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .school{
+    max-width: 380px;
+  }
+
+  .school-title{
+    font-size: 24px;
+  }
 }
 
 @media all and (min-width: 540px){
@@ -1528,6 +1606,30 @@ a.media-link{
   .project-bulletpoints{
     padding: 60px;
   }
+
+  .education-title-container{
+    width: 100%;
+    margin: 60px;
+  }
+
+  .school-square, .school-rotating-background, .schools-container{
+    width: 100%;
+  }
+
+  .school-square{
+    margin-bottom: 120px;
+  }
+
+  .schools-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .school{
+    margin: 20px;
+  }
+
 }
 
 @media all and (min-width: 860px){
@@ -1700,12 +1802,15 @@ a.media-link{
 
   .section-title > h3{
     font-size: 75px;
-    top: 110px;
-    left: 300px;
+    top: 350px;
   }
 
   .banner-menu-icons{
     margin: 0 30% 0 20px;
+  }
+
+  .projects{
+    padding: 0 10px 300px 10px;
   }
 
   .other-projects-container{
@@ -1714,6 +1819,7 @@ a.media-link{
   }
 
   .other-projects-title{
+    display: none;
     font-size: 14px;
     font-style: normal;
     order: 2;
@@ -1724,6 +1830,11 @@ a.media-link{
   .other-projects-title > p{
     font-size: 60px;
   }
+
+  .other-projects-title > p{
+    font-weight: 100;
+  }
+
 
   .other-projects{
     display: flex;
@@ -1758,6 +1869,7 @@ a.media-link{
   .other-name > a{
     margin-bottom: 15px;
     font-size: 48px;
+    margin: 0 0 10px 0;
     display: flex;
     justify-content: center;
   }
@@ -1774,11 +1886,164 @@ a.media-link{
     height: auto;
     order: 2;
   }
+
+  .education-title-container{
+    position: absolute;
+    margin: 0;
+  }
+
+  .education-title-container > h1{
+    color: rgb(63,63,83);
+    z-index: 1;
+    font-size: 60px;
+  }
+
+  .school-square{
+    width: 1000px;
+    margin: 0;
+    transform: rotate(45deg);
+    background-color: white;
+  }
+
+  .school-rotating-background{
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    height: 1000px;
+    justify-content: space-around;
+  }
+
+  .schools-container{
+    flex-flow: row wrap;
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    padding: 75px;
+  }
+
+  .school{
+    max-width: 300px;
+    margin: 0;
+    background: none;
+    color: black;
+    padding: 10px 0;
+  }
+
+  .school-header{
+    padding: 0;
+  }
+
+  .school-date{
+    font-size: 13px;
+  }
+
+  .school-program{
+    margin-top: 10px;
+  }
+
+  div.school-description{
+    background: none;
+    padding: 10px 0;
+  }
+
+  .school-logo-location{
+    padding: 10px 0;
+  }
+
+  .school-logo-location > img{
+    height: 50px;
+    padding-right: 15px;
+  }
+
 }
 
-@media all and (min-width: 1658px){
+@media all and (min-width: 1678px){
   .projects{
     justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .other-projects-container{
+    margin: 80px 40px 100px 40px;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .other-projects{
+    flex-direction: row;
+    width: 50vw;
+    flex: 0 0 auto;
+  }
+
+  .other{
+    max-width: 180px;
+    height: 180px;
+  }
+
+  .other > img{
+    max-width: 100%;
+  }
+
+  .other-name{
+    display: none;
+  }
+
+  .other-projects-title{
+    display: flex;
+    font-size: 36px;
+    justify-content: center;
+    font-weight: bolder;
+    font-style: italic;
+    padding-left: 10vw;
+    flex: 1;
+  }
+
+  .other-name .entypo-github-circled::before{
+    margin: 0;
+    padding: 0;
+  }
+
+  .education{
+    position: relative;
+  }
+
+  .education::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 500px; 
+    background-color: var(--portfolio-red);
+  }
+
+  .education-title-container{
+    position: relative;
+    width: 35%;
+    padding-top: 140px;
+  }
+
+  .education-title-container > h1{
+    font-size: 110px;
+    color: #9087ab;
+  }
+
+  .school-square{
+    position: relative;
+    z-index: 1;
+  }
+
+  .school-rotating-background::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 100vw solid white;
+    border-right: 100vw solid white;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
 }
 
@@ -1833,16 +2098,8 @@ a.media-link{
     padding: 0;
   }
 
-  .featured{
-    max-width: 1440px;
-  }
-
-  .project-subtitle{
-    width: 750px;
-  }
-
-  .project-bulletpoints{
-    width: 750px;
+  .education-title-container{
+    padding-right: 150px;
   }
 }
 
