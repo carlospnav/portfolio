@@ -7,72 +7,72 @@ angular.module('skills')
       this.skills = [
         { 
           name: 'AngularJS',
-          size: { 'font-size' : '60px' },
-          class: 'max-skill-size'
+          rank: 'I',
+          class: 'medium-skill-size'
         },
         {
           name: 'JavaScript',
-          size: { 'font-size' : '60px' },
+          rank: 'III',
           class: 'max-skill-size'
         },
         {
           name: 'WebApi',
-          size: { 'font-size' : '10px' },
+          rank: 'I',
           class: 'min-skill-size'
         },
         {
-          name: 'Entity Framework',
-          size: { 'font-size' : '10px' },
-          class: 'min-skill-size'
+          name: 'React',
+          rank: 'III',
+          class: 'max-skill-size'
         },
         {
-          name: 'HTML',
-          size: { 'font-size' : '40px' },
+          name: 'HTML 5',
+          rank: 'III',
           class: 'large-skill-size'
         },
         {
           name: 'Gulp',
-          size: { 'font-size' : '30px' },
+          rank: 'II',
           class: 'medium-skill-size'
         },
         {
           name: 'Git',
-          size: { 'font-size' : '40px' },
-          class: 'large-skill-size'
+          rank: 'II',
+          class: 'medium-skill-size'
         },
         {
           name: 'C#',
-          size: { 'font-size' : '10px' },
+          rank: 'I',
           class: 'min-skill-size'
         },
         {
           name: 'T-Sql',
-          size: { 'font-size' : '10px' },
+          rank: 'I',
           class: 'min-skill-size'
         },
         {
-          name: 'CSS',
-          size: { 'font-size' : '40px' },
-          class: 'large-skill-size'
+          name: 'CSS 3',
+          rank: 'III',
+          class: 'max-skill-size'
         },
         {
-          name: 'ASP.NET MVC',
-          size: { 'font-size' : '20px' },
+          name: 'JSES6',
+          rank: 'II',
           class: 'medium-skill-size'
         },
         {
           name: 'JasmineJS',
-          size: { 'font-size' : '30px' },
-          class: 'medium-skill-size'
+          rank: 'I',
+          class: 'small-skill-size'
         },
         {
           name: 'Npm',
-          size: { 'font-size' : '20px' },
+          rank: 'II',
           class: 'small-skills-size'
         },
         {
           name: 'Scrum',
-          size: { 'font-size' : '20px' },
+          rank: 'I',
           class: 'small-skills-size'
         }
       ]

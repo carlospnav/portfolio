@@ -384,6 +384,7 @@ div.school-description{
   display: flex;
   flex-wrap: wrap;
   background-color: var(--portfolio-purple);
+  padding-bottom: 60px;
 }
 
 .skills-list{
@@ -393,12 +394,14 @@ div.school-description{
 
 .skill{
   margin: 20px;
+  padding: 10px 20px;
   color: white;
   font-family: 'Lato';
   font-size: 18px;
   font-weight: 100;
   text-align: center;
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .skill:nth-child(even){
@@ -1031,6 +1034,17 @@ a.media-link{
   .school-title{
     font-size: 24px;
   }
+
+  .skills-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skill{
+    max-width: 380px;
+    width: 100%;
+  }
 }
 
 @media all and (min-width: 540px){
@@ -1272,6 +1286,10 @@ a.media-link{
   .other-projects-container{
     margin: 40px;
   }
+
+  .skills{
+    padding: 40px;
+  }
 }
 
 @media all and (min-width: 1150px){
@@ -1303,6 +1321,12 @@ a.media-link{
     text-align: center;
     margin: 0 0 20px 0;
     font-style: italic;
+  }
+}
+
+@media all and (min-width: 1300px){
+  .skills{
+    padding: 100px;
   }
 }
 
@@ -1419,21 +1443,43 @@ a.media-link{
     order: 2;
   }
 
+  .education{
+    justify-content: flex-end;
+  }
+
+  
+  .school-rotating-background::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 100vw solid white;
+    border-right: 100vw solid white;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
   .education-title-container{
     position: absolute;
     margin: 0;
+    justify-content: flex-start;
+    margin-left: 80px;
+    top: 150px;
   }
 
   .education-title-container > h1{
     color: rgb(63,63,83);
+    font-size: 70px;
     z-index: 1;
-    font-size: 60px;
   }
 
   .school-square{
     width: 1000px;
     margin: 0;
+    position: relative;
+    right: -5vw;
     transform: rotate(45deg);
+    z-index: 1;
     background-color: white;
   }
 
@@ -1487,6 +1533,118 @@ a.media-link{
     padding-right: 15px;
   }
 
+  skills{
+    max-height: 860px;
+  }
+  
+  skills::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 15vw;
+    width: 450px;
+    height: 860px;
+    background: url("../../dist/images/skills/face-white.png");
+    background-size: contain;
+  }
+
+  skills::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 18vw;
+    width: 450px;
+    height: 860px;
+    background: url("../../dist/images/skills/face-alt2.png");
+    background-size: contain;
+  }
+
+  .skills{
+    margin: 0;
+    padding: 20px;
+    height: 860px;
+  }
+
+  .skills-container{
+    width: 500px;
+    margin: 0;
+    height: 400px;
+  }
+
+  .skills-title-container{
+    margin-bottom: 200px;
+    width: 65%;
+    order: 2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  .skills-title{
+    color: rgb(63,63,83);
+    font-size: 80px;
+    margin: 200px 0 0 60px;
+  }
+
+  .skills-list{
+    width: 35%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 860px;
+    background-color: white;
+  }
+
+  .skill{
+    padding: 0;
+    background: none;
+    color: var(--portfolio-blue);
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .font-text.skill{
+    background: none;
+  }
+
+  .skill-rank{
+    display: none;
+  }
+
+  .max-skill-size{
+    font-size: 48px;
+    font-weight: bolder;
+    font-style: italic;
+  }
+
+  .large-skill-size{
+    font-size: 32px;
+    font-weight: bolder;
+    font-style: italic;
+  }
+
+  .medium-skill-size{
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .small-skill-size{
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  .min-skill-size{
+    font-size: 12px;
+    font-weight: 100;
+  }
 }
 
 @media all and (min-width: 1678px){
@@ -1560,22 +1718,6 @@ a.media-link{
   .education-title-container > h1{
     font-size: 110px;
     color: #9087ab;
-  }
-
-  .school-square{
-    position: relative;
-    z-index: 1;
-  }
-
-  .school-rotating-background::before{
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 100vw solid white;
-    border-right: 100vw solid white;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
   }
 }
 
