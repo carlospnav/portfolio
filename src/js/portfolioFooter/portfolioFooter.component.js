@@ -9,7 +9,7 @@ angular.module('portfolioFooter')
       'like to contact me, click on one of the links on the menu to the bottom right.',
       this.thanks = 'Thanks for visiting!',
       this.name = 'Carlos Navarrete',
-      this.location = 'Edinburgh, Scotland',
+      this.location = 'Brazil',
       this.mediaLinks = [
         { 
           title: 'Connect',

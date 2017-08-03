@@ -412,85 +412,148 @@ div.school-description{
   background-color: var(--portfolio-red);
 }
 
+.skills-title-container{
+  width: 100%;
+}
+
 .skills-title{
   order: 1;
   width: 100%;
   text-align: center;
-  margin: 20px 0;
+  margin: 40px 0 20px 0;
   font-size: 36px;
   font-style: italic;
   color: white;
 }
 
-/*
-.skills{
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
+/* Footer Rules */
 
-.skills > aside{
+portfolio-footer{
+  padding-top: 60px;
+  display: flex;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 50%;
-  background: linear-gradient(to left, #0f0f1e 0, #0f0f1e 50%, white 50%)
 }
 
-.skills > aside::before{
+portfolio-footer::before{
   content: "";
   position: absolute;
-  right: 0;
-  width: 450px;
-  height: 860px;
-  background: url("../../dist/images/skills/face-alt2.png");
-  background-size: contain;
+  top: -20px;
+  right: 20vw;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid var(--portfolio-purple);
 }
 
-.skills > aside::after{
-  content: "";
-  position: absolute;
-  right: 50px;
-  width: 450px;
-  height: 860px;
-  background: url("../../dist/images/skills/face-white.png");
-  background-size: contain;
+.central-content{
+  position: relative;
+  margin: 0 20px 80px 20px;
 }
 
-.skills-container{
+div.footer-title{
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 100px;
-  width: 50%;
-  z-index: 1;
 }
 
-.skills-title{
-  font-size: 150px;
+h1.footer-title{
+  font-size: 34px;
+  font-style: italic;
+  color: var(--portfolio-red)
+}
+
+h4.footer-title{
+  line-height: 50px;
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+h4.chat-bubble{
+  margin: 15px 30px 40px 30px;
+}
+
+.map-block-container{
+  padding: 40px 20px 20px 20px;
+  background-color: var(--portfolio-purple);
+}
+
+div.map-text{
+  margin-bottom: 10px;
   color: white;
-  margin: 165px 0 0 230px;
+  display: flex;
 }
 
-.skill{
-  margin: 0 10px;
+h6.map-text{
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h5.map-text{
+  font-size: 16px;
+  margin-left: 3px;
+  font-weight: 100;
+}
+
+p.map-text{
+  margin-left: 7px; 
   font-weight: 900;
 }
 
-skills::after{
-  content:"";
-  position: absolute;
-  bottom: -17%;
-  right: 10%;
-  width:0;
-  height:0;
-  border-right: 150px solid transparent;
-  border-left: 150px solid transparent;
-  border-top: 150px solid var(--portfolio-blue);
+footer{
+  background-color: var(--portfolio-purple);
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.profile-image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+  display: none;
+}
+
+.profile-image > img{
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: -70px;
+}
+
+nav.media-links{
+  padding: 20px 20px 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+div.media-links{
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li.media-link{
+  list-style: none;
+}
+
+a.media-link{
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.media-link-title{
+  font-weight: 900;
+  font-size: 12px;
+}
+
+/*
 portfolio-footer{
   position: relative;
   display: flex;
@@ -723,266 +786,6 @@ a.media-link{
   font-weight: 500;
 }*/
 
-
-
-
-
-/*@media screen and (min-width: 1921px){
-
-  main{
-    max-width: 1920px;
-    margin: 0 auto;
-  }
-    
-  .banner-menu-container::before{
-    border-left: 580px solid var(--portfolio-blue);
-  }
-
-  .banner-menu-container::after{
-    border-right: 515px solid transparent;
-    border-left: 515px solid transparent;
-    border-top: 530px solid white;
-  }
-
-  footer::after{
-    left: -300px;
-    border-right: 300px solid transparent;
-    border-left: 300px solid transparent;
-  }
-
-  @media screen and (max-width: 1750px){
-    .banner{
-      padding: 3% 0 14% 0;
-    }
-
-    .section-title h3{
-      font-size: 70px;
-    }
-
-    footer::after{
-      border-right: 205px solid transparent;
-      border-left: 205px solid transparent;
-      border-bottom: 205px solid var(--portfolio-blue);
-    }
-*/
-
-  /*@media all and (max-width: 1800px){
-    .banner-menu-container::before{
-      border-left: 20vw solid var(--portfolio-blue)
-    }
-  }
-  @media all and (max-width: 1750px){
-    .banner-title:last-of-type{
-      color: rgb(55,55,75);
-      font-size: 30px;
-    }
-
-    .featured-projects > h3{
-      font-size: 50px;
-    }
-  }
-
-  @media all and (max-width: 1440px){
-
-    .portrait-container{
-      width: 200px;
-      height: 200px;
-      top: calc(0% - 100px);
-    }
-
-    .banner-menu-container::before{
-      display: none;
-    }
-
-    .section-title{
-      justify-content: center;
-    }
-
-    .section-title>h1{
-      margin: 90px 0 0 117px;
-      font-size: 100px;
-      z-index: 2;
-    }
-
-    .featured-projects > h3{
-      position: absolute;
-      top: 110px;
-      left: 90px;
-      font-size: 160px;
-      color: var(--portfolio-red);
-    }
-
-    .featured-projects::after{
-      right: 0;
-      border-right: 23vw solid transparent;
-      border-left: 23vw solid transparent;
-      border-top: 24vw solid white;
-    }
-  }*/
-/*
-  @media all and (max-width: 1350px){
-
-    .featured-projects > h3{
-      position: absolute;
-      top: 80px;
-      font-size: 130px;
-    }
-
-    .section-title>h1{
-      margin: 30px 0 70px 110px;
-    }
-  }
-
-  @media all and (max-width: 1180px){
-    .banner{
-      height: 600px;
-    }
-
-    .banner-title{
-      font-weight: 100;
-    }
-
-    .banner-title:first-of-type, .banner-title:last-of-type{
-      font-weight: 900;
-    }
-
-    .banner-title:first-of-type{
-      font-size: 50px;
-    }
-
-    .banner-title:nth-of-type(3){
-      font-size: 30px;
-    }
-
-  }
-
-  @media all and (max-width: 1024px){
-    .featured-projects::after{
-      border-right: 20vw solid transparent;
-      border-left: 20vw solid transparent;
-      border-top: 22vw solid white;
-    }
-
-    .portrait-container{
-      width: 170px;
-      height: 170px;
-      top: calc(0% - 90px);
-    }
-
-    .featured-projects > h3{
-      font-size: 110px;
-    }
-
-    .section-title>h1{
-      font-size: 90px;
-      margin: 30px 0 110px 110px;
-    }
-  }
-
-  @media all and (max-width: 860px){
-    .banner{
-      height: 500px;
-    }
-
-    .banner-menu{
-      width: 90%;
-    }
-
-    .featured-projects::after{
-      right: 7vw;
-      border-right: 12vw solid transparent;
-      border-left: 12vw solid transparent;
-      border-top: 12vw solid white;
-    }
-  }
-
-  @media all and (max-width: 640px){
-
-
-    .banner{
-      height: 300px;
-      padding: 0;
-      justify-content: flex-start;
-      padding-top: 60px;
-    }
-
-    .banner-menu{
-      width: 100%;
-      padding-bottom: 10px;
-    }
-
-    .banner-menu li:nth-of-type(2){
-      padding-right: 0;
-    }
-
-    .banner-title, .banner-name{
-      color: var(--portfolio-blue);
-    }
-
-    .banner-name{
-      display: block;
-    }
-
-    .banner-title:nth-of-type(2), .banner-title:nth-of-type(3){
-      display: none;  
-    }
-
-    .banner-title:first-of-type{
-      display: flex;
-      font-size: 14px;
-      font-weight: 100;
-      justify-content: center;
-    }
-
-   .portrait-container{
-      display: none;
-    }
-
-    .section-title > h1{
-      position: absolute;
-      top: 190px;
-      margin: 0;
-      order: 2;
-    }
-
-    .featured-projects > h3 {
-      left: initial;
-    }
-
-    .featured-projects{
-      padding-top: 80px;
-      width: 100%; 
-    }
-  }
-
-  @media all and (max-width: 540px){
-
-    .banner{
-      background-image: none;
-      height: 180px;
-      padding: 0;
-      justify-content: center;
-    }
-
-    .section-title>h1{
-      top: 175px;
-      font-size: 70px;
-    }
-
-    .featured-projects > h3{
-      font-size: 90px;
-    }
-  }
-
-  @media all and (max-width: 460px){
-    .featured-projects > h3 {
-      font-size: 70px;
-    }
-
-    .section-title>h1 {
-      font-size: 50px;
-    }
-  }*/
 @media all and (min-width: 440px){
   banner{
     margin: 20px 20px 0 20px;
@@ -1583,7 +1386,6 @@ a.media-link{
   .skills-title{
     color: rgb(63,63,83);
     font-size: 80px;
-    margin: 200px 0 0 60px;
   }
 
   .skills-list{
