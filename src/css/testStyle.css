@@ -505,23 +505,25 @@ footer{
   flex-flow: row wrap;
 }
 
-.profile-image{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 50px;
+.footer-menu-icons{
   display: none;
 }
 
+.profile-image{
+  position: relative;
+  display: none;
+  margin: 80px 100px;
+  width: 180px;
+}
+
 .profile-image > img{
-  width: 140px;
-  height: auto;
+  width: 100%;
   border-radius: 50%;
   background-color: white;
-  padding: 10px;
-  position: absolute;
-  top: -70px;
+}
+
+#map{
+  height: 300px;
 }
 
 nav.media-links{
@@ -553,238 +555,7 @@ a.media-link{
   font-size: 12px;
 }
 
-/*
-portfolio-footer{
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
-.portfolio-footer{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.content{
-  height: 760px;
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.central-content{
-  flex: 1;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-}
-
-.central-content::before{
-  content: "";
-  height: 800px;
-  width: 900px;
-  background-color: white;
-  left: 7%;
-  bottom: 0;
-  position: absolute;
-  z-index: 1;
-  border-radius: 0 0 100% 100%;
-}
-
-div.footer-title{
-  display: inline-block;
-  text-align: right;
-  margin: 0 150px 150px 0;
-  align-self: flex-end;
-  z-index: 1;
-}
-
-h1.footer-title, h4.footer-title{
-  font-style: normal;
-  margin: 0;
-}
-
-h1.footer-title{
-  color: var(--portfolio-blue);
-  font-size: 150px;
-  line-height: 0.8em;
-}
-
-h4.footer-title{
-  color: var(--portfolio-red);
-  font-size: 30px;
-}
-
-div.chat-bubble::after{
-  content: "";
-  height: 260px;
-  width: 70%;
-  background-color: white;
-  left: 50%;
-  bottom: -35%;
-  position: absolute;
-  z-index: 2;
-  border-radius: 100%;
-}
-
-div.chat-bubble{
-  position: relative;
-  width: 410px;
-  margin-left: 280px;
-  z-index: 3;
-}
-
-p.chat-bubble{
-  position: relative;
-  font-size: 18px;
-  z-index: 3;
-}
-
-span.chat-bubble{
-  display: block;
-}
-
-h4.chat-bubble{
-  position: relative;
-  color: black;
-  font-style: normal;
-  font-size: 30px;
-  margin: 25px 0 0 0;
-  text-align: center;
-  z-index: 3;
-}
-
-.map-block-container{
-  position: relative;
-  width: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 40px 40px 0;
-  z-index: 2;
-}
-
-.map-block-container::after{
-  content: "";
-  height: 70px;
-  width: 600px;
-  background-color: var(--portfolio-red);
-  left: -600px;
-  bottom: 70px;
-  position: absolute;
-  z-index: 1;
-}
-
-.map-text{
-  font-size: 20px;
-  display: flex;
-  position: relative;
-  margin-bottom: 5px;
-}
-
-h6.map-text{
-  position: absolute;
-  margin: 0;
-  font-size: 16px;
-  top: -1em;
-}
-
-h5.map-text{
-  font-weight: 500;
-}
-
-p.map-text{
-  color: black;
-  font-style: normal;
-  padding-left: 0.8em;
-}
-
-.map-container{
-  height: 400px;
-  background-color: rgb(61, 61, 82);
-  border: 1px solid black;
-  padding: 10px;
-}
-
-ng-map{
-  height: 100%;
-}
-
-footer{
-  position: relative;
-  background-color: var(--portfolio-blue);
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 60px;
-  bottom: 0;
-  height: 150px;
-}
-
-footer::before{
-  content: "";
-  height: 650px;
-  width: 580px;
-  background-color: var(--portfolio-blue);
-  left: 0;
-  bottom: 0;
-  position: absolute;
-}
-
-footer::after{
-  content: "";
-  height: 0;
-  width: 0;
-  left: -230px;
-  bottom: 650px;
-  border-right: 230px solid transparent;
-  border-left: 230px solid transparent;
-  border-bottom: 225px solid var(--portfolio-blue);
-  position: absolute;
-  z-index: 1;
-}
-
-.profile-image{
-  position: absolute;
-  z-index: 1;
-  height: 190px;
-  width: 190px;
-  top: -110px;
-  left: 430px;
-  padding: 15px;
-  border-radius: 100%;
-  background-color: white;
-}
-
-.profile-image > img{
-  max-width: 100%;
-  border-radius: 100%;
-}
-
-nav.media-links{
-  margin-top: 1em;
-  display: flex;
-  color: white;
-}
-
-div.media-links{
-  margin-right: 40px;
-}
-
-
-
-a.media-link{
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-}
-
-.media-link-title{
-  padding-left: 20px;
-  font-weight: 500;
-}*/
+/* MEDIA QUERIES */
 
 @media all and (min-width: 440px){
   banner{
@@ -848,6 +619,30 @@ a.media-link{
     max-width: 380px;
     width: 100%;
   }
+
+  portfolio-footer::before{
+    top: -40px;
+  }
+
+  .central-content{
+    margin: 0 40px 80px 40px;
+  }
+
+  .map-block-container{
+    padding: 40px 40px 20px 40px;
+  }
+
+  nav.media-links{
+    padding: 20px 20px 60px 20px;
+  }
+
+  .media-link-title{
+    font-size: 16px;
+  }
+
+  a.media-link{
+    font-size: 12px;
+  }
 }
 
 @media all and (min-width: 540px){
@@ -882,6 +677,19 @@ a.media-link{
 
   .project-bulletpoints{
     padding: 40px 60px;
+  }
+
+  .central-content{
+    margin: 0 40px 120px 40px;
+  }
+
+  nav.media-links{
+    padding: 20px 40px 60px 40px;
+    justify-content: flex-start;
+  }
+
+  div.media-links:first-child{
+    margin-right: 20px;
   }
 }
 
@@ -925,6 +733,21 @@ a.media-link{
 
   .other-projects-container{
     margin: 0 40px 40px 40px;
+  }
+
+  .content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .central-content{
+    max-width: 500px;
+    margin: 0 0 100px 0;
+  }
+
+  .map-block-container{
+    width: 100%;
   }
 }
 
@@ -979,6 +802,27 @@ a.media-link{
     margin: 20px;
   }
 
+  .central-content{
+    margin-bottom: 90px;
+  }
+
+  h1.footer-title{
+    font-size: 64px;
+  }
+
+  h4.footer-title{
+    margin-left: 12px;
+    font-size: 30px;
+    line-height: 95px;
+  }
+
+  h4.chat-bubble{
+    font-size: 48px;
+    font-style: italic;
+    text-align: center;
+    margin: 45px 0;
+    color: rgb(114,114, 139);
+  }
 }
 
 @media all and (min-width: 860px){
@@ -987,7 +831,7 @@ a.media-link{
   }
 
   projects, education, skills {
-    margin: 0 40px 40px 40px;
+    margin: 0 40px 20px 40px;
   }
 
   banner{
@@ -1043,16 +887,50 @@ a.media-link{
      max-width: 500px;
      margin: 90px 0 120px 0;
    }
+
+   portfolio-footer{
+     padding-top: 100px;
+   }
+
+   portfolio-footer::before{
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 70px solid var(--portfolio-purple);
+   }
+
+   .central-content{
+     margin-bottom: 0;
+   }
+
+   h4.chat-bubble{
+     margin-bottom: 0;
+   }
+
+   .map-block-container{
+     max-width: 600px;
+     background: none;
+     padding: 30px;
+     margin: 45px 60px 80px 60px;
+   }
+
+   div.map-text{
+     color: black;
+   }
+
+   h6.map-text{
+     font-weight: 500;
+   }
+
+   h5.map-text{
+     font-weight: 500;
+   }
+
+   .map-container{
+     border: 20px solid var(--portfolio-purple);
+   }
  }
 
 @media all and (min-width: 1024px){
-  .top-container{
-    margin: 40px 40px 0 40px;
-  }
-
-  .container{
-    margin: 0 40px 40px 40px;
-  }
 
   banner, projects, education, skills{
     width: calc(100% - 80px);
@@ -1125,11 +1003,81 @@ a.media-link{
     margin: 0 0 20px 0;
     font-style: italic;
   }
+
+  portfolio-footer{
+    padding-top: 120px;
+  }
+
+  portfolio-footer::before{
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 80px solid var(--portfolio-purple);
+  }
+
+  .central-content{
+    max-width: 600px;
+  }
+
+  h1.footer-title{
+    font-size: 72px;
+  }
+
+  h4.footer-title{
+    font-size: 34px;
+    line-height: 105px;
+  }
+
+  .map-block-container{
+    padding: 0;
+    margin: 80px 80px 100px 80px;
+  }
 }
 
 @media all and (min-width: 1300px){
   .skills{
     padding: 100px;
+  }
+
+  portfolio-footer{
+    padding: 0;
+  }
+
+  .content{
+    padding: 180px 0;
+    justify-content: space-around;
+  }
+
+  div.chat-bubble{
+    position: relative;
+  }
+
+  .central-content{
+    max-width: 500px;
+  }
+
+  .map-block-container{
+    margin: 0;
+    max-width: 500px;
+  }
+
+  .footer-menu-icons{
+    display: block;
+    margin-top: 40px;
+  }
+
+  .footer-menu-icons > li{
+    display: inline-block;
+    font-size: 28px;
+    margin: 0 10px;
+  }
+
+  h4.chat-bubble{
+    display: block;
+    position: absolute;
+    margin: 0;
+    font-size: 42px;
+    bottom: -8px;
+    right: -25px;
   }
 }
 
@@ -1449,6 +1397,20 @@ a.media-link{
   }
 }
 
+@media all and (min-width: 1500px){
+
+  portfolio-footer::before{
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 150px solid var(--portfolio-purple);
+  }
+
+  .content{
+    padding: 230px 130px 200px 130px;
+    justify-content: space-between;
+  }
+}
+
 @media all and (min-width: 1678px){
   .projects{
     justify-content: space-between;
@@ -1521,6 +1483,10 @@ a.media-link{
     font-size: 110px;
     color: #9087ab;
   }
+
+  .content{
+    justify-content: space-around;
+  }
 }
 
 @media all and (min-width: 1750px){
@@ -1576,6 +1542,66 @@ a.media-link{
 
   .education-title-container{
     padding-right: 150px;
+  }
+
+  portfolio-footer::before{
+    right: 15vw;
+  }
+
+  .content{
+    height: 800px;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .central-content{
+    max-width: 700px;
+    height: 600px;
+    margin: 120px 150px 80px 150px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1.footer-title{
+    font-size: 100px;
+  }
+
+  h4.footer-title{
+    font-size: 30px;
+    line-height: 160px;
+  }
+
+  p.chat-bubble{
+    width: 90%;
+    margin-left: 60px;
+  }
+
+  h4.chat-bubble{
+    right: -70px;
+    font-size: 52px;
+  }
+
+  .footer-menu-icons{
+    margin: 40px 0 0 150px;
+  }
+
+  .footer-menu-icons > li{
+    font-size: 32px;
+  }
+
+  .profile-image{
+    display: block;
+    margin: 80px 100px 80px 180px;
+  }
+
+  .map-block-container{
+    align-self: flex-end;
+    margin: 120px;
+    max-width: 600px;
+  }
+
+  #map{
+    height: 350px;
   }
 }
 
