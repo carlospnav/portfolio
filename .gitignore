@@ -1,4 +1,6 @@
 node_modules/
-src/
+src/*
 !src/js
 !src/scss
+!src/css
+*.psd

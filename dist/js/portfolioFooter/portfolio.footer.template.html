@@ -1,0 +1,49 @@
+<section class="portfolio-footer">
+  <div class="content">
+    <div class="central-content">
+      <div class="footer-title">
+        <h1 class="footer-title font-title">Available</h1>
+        <h4 class="footer-title font-title">for hire.</h4>
+      </div>
+      <div class="chat-bubble"> 
+        <p class="font-text chat-bubble">
+          {{$ctrl.chat}}
+          <span class="chat-bubble">{{$ctrl.thanks}}</span>
+        </p>
+        <ul class="footer-menu-icons">
+          <li class="entypo-github-circled"><a href="https://www.github.com/carlospnav"></a></li>
+          <li class="entypo-linkedin-circled"><a href="https://www.linkedin.com/carlospnav"></a></li>
+          <li class="entypo-facebook-circled"><a href="https://www.facebook.com/carlos.navarrete"></a></li>
+          <li class="entypo-info-circled"><a href="karnav@gmail.com"></a></li>
+        </ul>
+        <h4 class="chat-bubble font-title">
+          {{$ctrl.name}}
+        </h4>
+      </div>
+      <div class="profile-image">
+        <img ng-src="dist/images/thumbs/me.jpg" alt="Author's Picture"/>
+      </div>
+    </div>
+    <div class="map-block-container">
+      <div class="map-text">
+        <h6 class="font-text map-text">Currently</h6>
+        <h5 class="font-text map-text">Located in:</h6> <p class="font-title map-text">{{$ctrl.location}}</p>
+      </div>
+      <div class="map-container" map-lazy-load="https://maps.google.com/maps/api/js">
+        <ng-map id="map" center="Rio de Janeiro" zoom="8"></ng-map>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <nav class="media-links font-text">
+      <div class="media-links" ng-repeat="category in $ctrl.mediaLinks">
+        <p class="media-link-title">{{category.title}}</p>
+        <ul class="media-link">
+          <li class="media-link" ng-repeat="links in category.links">
+            <a class="media-link" href="{{links.url}}">{{links.title}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+</section>

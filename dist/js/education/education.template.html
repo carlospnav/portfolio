@@ -1,0 +1,32 @@
+<section class="education">
+  <div class="education-title-container thick-inner-container">
+    <h1 class="education-title">Education</h1>
+  </div>
+  <div class="school-square thick-inner-container">
+    <div class="school-rotating-background">
+      <div class="schools-container inner-container">
+        <article class="school" ng-repeat="school in $ctrl.schools">
+          <div class="school-header">
+            <h3 class="school-title font-text">{{school.name}} - {{school.degree}}</h3>
+            <h6 class="school-date">{{school.date}}</h6>
+            <h4 class="school-program font-text">{{school.program}}</h4>
+          </div>
+          <div class="school-description font-text">
+            <p class="school-description font-text">
+              {{school.description}}
+            </p>
+          </div>
+          <div class="school-logo-location font-text">
+            <img ng-src="{{school.thumbnail}}" alt="{{school.thumbAlt}}" /> 
+            <p>
+              Location: Rio de Janeiro, Brazil.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!--<div class="school-ribbon">
+    <img ng-src="{{$ctrl.ribbonUrl}}" alt="A ribbon for the school hat decoration." />
+  </div>-->
+</section>
