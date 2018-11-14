@@ -23,6 +23,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "standard": {
+    "ignore": [
+      "serviceWorker.js"
+    ]
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

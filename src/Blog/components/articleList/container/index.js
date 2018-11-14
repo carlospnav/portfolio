@@ -14,7 +14,7 @@ class ArticleList extends Component {
   }
 }
 
-const mapStateToProps = ({articles}) => ({
+const mapStateToProps = ({ articles }) => ({
   articles: objToArr(articles)
 })
 
