@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { objToArr } from '../../../../utils'
 
-// const MockList = [
-//   {
-//     id: 1,
-//     title: 'First Title',
-//     content: ''
-//   },
-// ]
-
-export default class ArticleList extends Component {
+class ArticleList extends Component {
   render () {
     return (
-      <div>oioi
-      </div>
+      <main>
+        {this.props.articles.map(article => (
+          <div key={article.id}>{article.title}</div>
+        ))}
+      </main>
     )
   }
 }
+
+const mapStateToProps = ({articles}) => ({
+  articles: objToArr(articles)
+})
+
+export default connect(mapStateToProps)(ArticleList)
