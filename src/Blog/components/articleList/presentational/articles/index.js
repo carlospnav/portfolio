@@ -4,7 +4,7 @@ const Articles = ({ articles }) => articles && articles
   .map(article => (
     <div key={article.id}>
       <p>{article.title}</p>
-      <p>{article.content}</p>
+      <p>{article.category}</p>
     </div>
   ))
 

@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { objToArr } from '../../../../utils'
+import { requestInitialArticles } from '../../../../store/actions/articles'
 
 import Articles from '../presentational/articles'
 
 class ArticleList extends Component {
   componentDidMount () {
-    // dispatch fetch request to the server to retrieve articles.
+    this.props.dispatch(requestInitialArticles())
   }
 
   render () {
