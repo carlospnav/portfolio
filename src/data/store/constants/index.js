@@ -1,8 +1,5 @@
 export const actions = {
-  general: {
-    request: 'request',
-    success: 'success',
-    failure: 'failure'
-  },
-  REQUEST_ARTICLES: 'REQUEST_ARTICLES'
+  REQUEST_FAILURE: 'REQUEST_FAILURE',
+  REQUEST_FETCH_ARTICLES: 'REQUEST_FETCH_ARTICLES',
+  REQUEST_FETCH_ARTICLES_SUCCESS: 'REQUEST_FETCH_ARTICLES_SUCCESS'
 }
