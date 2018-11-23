@@ -16,14 +16,23 @@ export default function articles (state = {
     content: '## Tudo bem?',
     createdAt: 1542303526118,
     modifiedAt: 1542303547126
-  }
+  },
+  error: false,
+  loading: false
 }, action) {
   switch (action.type) {
     case actions.REQUEST_ARTICLES: {
       const actionStatus = {
-        success: () => state,
-        failure: () => state,
-        request: () => state
+        request: () => ({
+          ...state,
+          loading: true
+        }),
+        failure: () => ({
+          ...state,
+          loading: false,
+          error: true
+        }),
+        success: () => state
       }
       return actionStatus[action.status]()
     }

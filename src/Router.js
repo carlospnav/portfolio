@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
-import ArticleList from './Blog/components/articleList/container'
+import ArticleList from './components/blog/articleList/container'
 
 class Router extends Component {
   render () {
