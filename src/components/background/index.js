@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import { Design, FormatRGBToGradient } from '../../utils'
 
 const StyledBG = styled.div`
-  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom, 
     ${FormatRGBToGradient(Design.colors.bgBlue)},
     ${FormatRGBToGradient(Design.colors.bgPurple)}
