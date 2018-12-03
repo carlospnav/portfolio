@@ -10,18 +10,3 @@ export const FormatRGBToGradient = ({ r, g, b, a }) => {
   }
   return `rgb(${r}, ${g}, ${b}${a ? `, ${a}` : ''})`
 }
-
-export const Design = {
-  colors: {
-    bgBlue: {
-      r: 56,
-      g: 38,
-      b: 151
-    },
-    bgPurple: {
-      r: 100,
-      g: 60,
-      b: 170
-    }
-  }
-}
