@@ -17,9 +17,19 @@ export const Description = styled.p`
   font-size: 15px;
 `
 
-export const LinkText = css`
+export const LinkIdentifierText = css`
   ${BaseText}
   font-size: 9px;
-  font-weight: 500;
+  font-weight: 300;
+`
+
+export const LinkText = css`
+  ${LinkIdentifierText}
   margin-right: 20px;
+`
+
+export const Label = styled.span`
+  ${LinkIdentifierText}
+  font-size: 8px;
+  margin-left: 10px;
 `
