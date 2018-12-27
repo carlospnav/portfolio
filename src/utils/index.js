@@ -10,3 +10,5 @@ export const FormatRGBToGradient = ({ r, g, b, a }) => {
   }
   return `rgb(${r}, ${g}, ${b}${a ? `, ${a}` : ''})`
 }
+
+export const capitalize = s => s && s[0].toUpperCase() + s.slice(1)

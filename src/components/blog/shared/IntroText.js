@@ -10,27 +10,54 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+  align-items: flex-start;
+  margin-top: 20px;
   max-width: 960px;
+
+  @media all and (min-width: 700px) {
+    margin-top: 20px;
+  }
 `
 
 const Title = styled(BaseTitle)`
   text-align: left;
+  font-size: 32px;
+
+  @media all and (min-width: 500px) {
+    font-size: 38px;
+  }
+
+  @media all and (min-width: 600px) {
+    font-size: 42px;
+  }
+
+  @media all and (min-width: 700px) {
+    font-size: 46px;
+  }
+
+  @media all and (min-width: 850px) {
+    font-size: 52px;
+  }
 `
 
 const Description = styled(BaseDescription)`
   max-width: 450px;
-  margin: 60px 0 0 0;
-  align-self: flex-end;
+  margin: 35px 0 0 0;
+
+  @media all and (min-width: 700px) {
+    margin: 35px 0 0 0;
+  }
 `
 
 const Name = styled(BaseDescription)`
-  position: absolute;
-  font-style: italic;
+  position: relative;
+  font-size: 14px;
   font-weight: 100;
-  bottom: 160px;
-  left: 400px;
+  margin: 20px 0 0 0;
+
+  @media all and (min-width: 700px) {
+
+  }
 `
 
 const IntroText = () => (

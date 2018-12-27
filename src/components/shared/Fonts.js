@@ -16,3 +16,10 @@ export const Description = styled.p`
   font-weight: 300;
   font-size: 15px;
 `
+
+export const LinkText = css`
+  ${BaseText}
+  font-size: 9px;
+  font-weight: 500;
+  margin-right: 20px;
+`

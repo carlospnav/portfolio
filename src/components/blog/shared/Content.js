@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Main = styled.main`
-  width: 100%;
-  margin-top: 100px;
-  max-width: 960px;
-  min-height: 800px;
+  min-height: 120px;
   background-color: white;
+
+  @media all and (min-width: 700px) {
+    margin-top: 50px;
+  }
 `
 
 const Content = ({ children }) => (

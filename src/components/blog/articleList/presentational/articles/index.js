@@ -2,7 +2,7 @@ import React from 'react'
 
 const Articles = ({ articles }) => articles && articles
   .map(article => (
-    <p>.</p>
+    <p style={{ margin: 0 }}>{article.title}</p>
   ))
 
 export default Articles

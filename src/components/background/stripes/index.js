@@ -9,7 +9,8 @@ const Stripes = styled.div`
   left: -750px;
   display: flex;
   flex-direction: column;
-  z-index: 0;
+  display: none;
+  z-index: -1;
 `
 const rgbStripe = `
   173,

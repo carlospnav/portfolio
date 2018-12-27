@@ -4,7 +4,10 @@ import { connect } from 'react-redux'
 import { objToArr } from '../../../../utils'
 import { requestInitialArticles } from '../../../../data/store/actions/articles'
 
+import Content from '../../shared/Content'
+import CategoriesSelector from '../presentational/categoriesSelector'
 import Articles from '../presentational/articles'
+import MainContainer from '../../shared/MainContainer';
 
 class ArticleList extends Component {
   componentDidMount () {
@@ -13,9 +16,14 @@ class ArticleList extends Component {
 
   render () {
     return (
-      <main>
-        <Articles articles={this.props.articles.data} />
-      </main>
+      <MainContainer>
+        <CategoriesSelector />
+        <Content>
+          <Articles articles={this.props.articles.data.filter(
+            article => article.category === this.props.match.params.category.toUpperCase()
+          )} />
+        </Content>
+      </MainContainer>
     )
   }
 }
