@@ -1,17 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import Router from './Router'
+import RouterComponent from './Router'
 import store from './data/store'
+import history from './history'
 import './index.css'
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <Router history={history}>
+      <RouterComponent />
+    </Router>
   </Provider>,
   document.getElementById('root')
 )
