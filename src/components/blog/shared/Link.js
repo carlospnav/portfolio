@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 const BaseLink = styled(NavLink)`
   ${LinkText}
   text-decoration: none;
+  padding-bottom: 2px;
 `
 
 const Link = ({ to }) => (
@@ -15,7 +16,7 @@ const Link = ({ to }) => (
     strict
     exact
     activeStyle={{
-      textDecoration: 'underline',
+      borderBottom: '1px solid white',
       fontWeight: 900
     }}
     isActive={(_, { pathname }) => pathname === `/${to}`}
