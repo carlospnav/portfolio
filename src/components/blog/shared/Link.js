@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import { LinkText } from '../../shared/Fonts'
+import { MenuText } from '../../../utils/design/fonts'
 import PropTypes from 'prop-types'
 
 const BaseLink = styled(NavLink)`
-  ${LinkText}
+  ${MenuText}
   text-decoration: none;
   padding-bottom: 2px;
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Label } from '../../../../shared/Fonts'
+import { Label } from '../../../../../utils/design/fonts'
 
 const Arrow = styled(Label)`
   font-size: 9px;

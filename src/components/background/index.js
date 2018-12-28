@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import design from '../../utils/design'
+import colors from '../../utils/design/colors'
 import Stripes from './stripes'
 
 const StyledBG = styled.div`
@@ -12,8 +12,8 @@ const StyledBG = styled.div`
   align-items: center;
   padding: 40px;
   background: linear-gradient(to bottom, 
-    ${design.colors.bgBlue},
-    ${design.colors.bgPurple}
+    ${colors.bgBlue},
+    ${colors.bgPurple}
   );
 `
 

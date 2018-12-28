@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../../../shared/Link'
-import { Label } from '../../../../shared/Fonts'
+import { Label } from '../../../../../utils/design/fonts'
 import LeftArrow from '../leftArrow'
 
 const Selector = styled.nav`

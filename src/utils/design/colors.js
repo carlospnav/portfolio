@@ -1,23 +1,5 @@
-import styled, { css } from 'styled-components'
 import { FormatRGBToGradient } from '../index'
 
-const BaseText = css`
-  font-family: Roboto;
-  color: white;
-  margin: 0;
-`
-const Title = styled.h1`
-  ${BaseText}
-  font-style: italic;
-  font-weight: 900;
-  font-size: 80px;
-  margin: 0;
-`
-const Description = styled.p`
-  ${BaseText}
-  font-weight: 300;
-  font-size: 15px;
-`
 const rgbs = {
   bgBlue: {
     r: 56,
@@ -54,11 +36,4 @@ const colors = {
   articleSeparator: FormatRGBToGradient(rgbs.articleSeparator)
 }
 
-export default {
-  colors,
-  rgbs,
-  fonts: {
-    Title,
-    Description
-  }
-}
+export default colors
