@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 import Background from './components/background'
 import ArticleList from './components/blog/articleList/container'
@@ -10,7 +10,10 @@ class Router extends Component {
     return (
       <Background>
         <IntroText />
-        <Route path='/:category?' component={ArticleList} />
+        <Route exact path='/' render={() => (
+          <Redirect to='/react' />
+        )} />
+        <Route path='/:category' component={ArticleList} />
       </Background>
     )
   }

@@ -7,7 +7,7 @@ import { requestInitialArticles } from '../../../../data/store/actions/articles'
 import Content from '../../shared/Content'
 import CategoriesSelector from '../presentational/categoriesSelector'
 import Articles from '../presentational/articles'
-import MainContainer from '../../shared/MainContainer';
+import MainContainer from '../../shared/MainContainer'
 
 class ArticleList extends Component {
   componentDidMount () {
@@ -15,13 +15,16 @@ class ArticleList extends Component {
   }
 
   render () {
+    const category = this.props.match.params.category || 'react'
     return (
       <MainContainer>
         <CategoriesSelector />
         <Content>
-          <Articles articles={this.props.articles.data.filter(
-            article => article.category === this.props.match.params.category.toUpperCase()
-          )} />
+          {!!this.props.articles.data.length && (
+            <Articles articles={this.props.articles.data.filter(
+              article => article.category.toLowerCase() === category
+            )} />
+          )}
         </Content>
       </MainContainer>
     )

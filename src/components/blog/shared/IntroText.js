@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {
   Title as BaseTitle,
   Description as BaseDescription
-} from '../../shared/Fonts'
+} from '../../../utils/design/fonts'
 
 const Wrapper = styled.div`
   position: relative;

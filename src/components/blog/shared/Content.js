@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Main = styled.main`
-  min-height: 120px;
+  min-height: 80px;
   background-color: white;
 
   @media all and (min-width: 700px) {

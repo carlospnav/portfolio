@@ -1,16 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../../../shared/Link'
+import { Label } from '../../../../../utils/design/fonts'
+import LeftArrow from '../leftArrow'
 
 const Selector = styled.nav`
   display: flex;
+  justify-content: flex-end;
   margin-bottom: 15px;
 `
+const Links = styled.div`
+  flex: 1;
+  display: flex;
+`
 
-const CategoriesSelector = (props) => (
+const CategoriesSelector = () => (
   <Selector>
-    <Link to='react' />
-    <Link to='redux' />
+    <Links>
+      <Link to='react' />
+      <Link to='redux' />
+    </Links>
+    <LeftArrow />
+    <Label>{`CATEGORIES`}</Label>
   </Selector>
 )
 
