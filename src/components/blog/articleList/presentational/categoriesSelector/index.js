@@ -14,7 +14,7 @@ const Links = styled.div`
   display: flex;
 `
 
-const CategoriesSelector = (props) => (
+const CategoriesSelector = () => (
   <Selector>
     <Links>
       <Link to='react' />

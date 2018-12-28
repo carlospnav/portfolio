@@ -1,26 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { LinkText } from '../../shared/Fonts'
+import PropTypes from 'prop-types'
 
 const BaseLink = styled(NavLink)`
   ${LinkText}
   text-decoration: none;
 `
 
-const Link = (props) => (
+const Link = ({ to }) => (
   <BaseLink
-    {...props}
+    to={to}
     strict
     exact
     activeStyle={{
       textDecoration: 'underline',
       fontWeight: 900
     }}
-    isActive={(_, { pathname }) => pathname === `/${props.to}`}
+    isActive={(_, { pathname }) => pathname === `/${to}`}
   >
-    {props.to.toUpperCase()}
+    {to.toUpperCase()}
   </BaseLink>
 )
 
-export default withRouter(Link)
+Link.propTypes = {
+  to: PropTypes.string.isRequired
+}
+
+export default Link

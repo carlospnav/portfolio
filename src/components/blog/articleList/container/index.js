@@ -19,9 +19,11 @@ class ArticleList extends Component {
       <MainContainer>
         <CategoriesSelector />
         <Content>
-          <Articles articles={this.props.articles.data.filter(
-            article => article.category === this.props.match.params.category.toUpperCase()
-          )} />
+          {!!this.props.articles.length && (
+            <Articles articles={this.props.articles.data.filter(
+              article => article.category === this.props.match.params.category.toUpperCase()
+            )} />
+          )}
         </Content>
       </MainContainer>
     )
